@@ -1,0 +1,1279 @@
+<!doctype html>
+<html lang="ca">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cybershield Solutions — Protect · Detect · Secure</title>
+  <meta name="description"
+    content="Auditories de seguretat, anàlisi de vulnerabilitats i plans de millora. Cybershield Solutions S.L.">
+
+  <!-- SEO Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cybershield Solutions — Protect · Detect · Secure">
+  <meta property="og:description"
+    content="Agent d'auditoria professional per a sistemes Linux. Integració Trivy, Nmap, SSH-Audit amb informes PDF/CSV.">
+  <meta property="og:image" content="/Assets/web.png">
+  <meta property="og:url" content="https://cybershield.local">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cybershield Solutions — Diag Agent Professional">
+  <meta name="twitter:description" content="Suite professional d'auditoria i diagnòstic per a sistemes Linux">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- El teu CSS -->
+  <link href="custom.css" rel="stylesheet">
+  <link href="carousel.css" rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#topnav" data-bs-offset="90" tabindex="0">
+
+  <!-- NAVBAR -->
+  <nav id="topnav" class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#inici">
+        <img src="Assets/logo.png" class="logo-shield" alt="Escut de Cybershield" />
+        <span class="fw-bold">Cybershield<span class="text-gradient"> Solutions</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse"
+        aria-controls="navCollapse" aria-expanded="false" aria-label="Commuta navegació">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navCollapse">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#serveis">Serveis</a></li>
+          <li class="nav-item"><a class="nav-link" href="#app">App</a></li>
+          <li class="nav-item"><a class="nav-link" href="#funcionalitats">Funcionalitats</a></li>
+          <li class="nav-item"><a class="nav-link" href="#equip">Equip</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tarifes">Tarifes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacte">Contacte</a></li>
+          <li class="nav-item"><a class="nav-link" href="#noticies">Notícies</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item ms-lg-3">
+            <a href="#contacte" class="btn btn-primary btn-sm px-3"><i class="bi bi-rocket-takeoff"></i> Comença ara</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div id="scrollProgress" class="scroll-progress"></div>
+
+  <!-- HERO / INICI -->
+  <header id="inici" class="hero section-pad">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <h1 class="display-5 fw-800 mb-3 reveal">Automatització d'<span class="text-gradient">auditories</span> i
+            plans de <span class="neon-text">millora</span></h1>
+          <p class="lead mb-4 reveal delay-1">Auditem, detectem i reforcem. Des d'entorns Linux a infraestructures
+            híbrides. Produeix <span class="text-gradient">informes professionals</span> (PDF/CSV) en minuts.</p>
+          <div class="d-flex flex-wrap gap-2 reveal delay-2">
+            <a href="#app" class="btn btn-primary btn-lg"><i class="bi bi-rocket-takeoff"></i> Prova el Diag Agent</a>
+            <a href="#contacte" class="btn btn-outline-light btn-lg"><i class="bi bi-shield-lock"></i> Sol·licita una
+              auditoria</a>
+          </div>
+          <div class="mt-4 small reveal delay-3">
+            <i class="bi bi-check2-circle" style="color: var(--accent-neon);"></i> Metodologia àgil (SCRUM) · <i
+              class="bi bi-check2-circle" style="color: var(--accent-neon);"></i> Eines Open-Source · <i
+              class="bi bi-check2-circle" style="color: var(--accent-neon);"></i> Resultats mesurables
+          </div>
+        </div>
+        <div class="col-lg-5 text-center text-lg-end">
+          <!-- Terminal Widget -->
+          <div class="terminal-widget reveal-fly">
+            <div class="terminal-header">
+              <div class="terminal-buttons">
+                <span class="terminal-btn red"></span>
+                <span class="terminal-btn yellow"></span>
+                <span class="terminal-btn green"></span>
+              </div>
+              <span class="terminal-title">diag-agent@cybershield:~</span>
+            </div>
+            <div class="terminal-body">
+              <div class="terminal-line">
+                <span class="terminal-prompt">$</span>
+                <span id="terminalText" class="terminal-text"></span>
+                <span class="terminal-cursor">|</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Logos de confiança -->
+      <div class="row mt-5 gy-3 align-items-center opacity-75 reveal delay-3">
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="logo-row">Linux</div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="logo-row">Ubuntu</div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="logo-row">Proxmox</div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="logo-row">Grafana</div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="logo-row">Docker</div>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="logo-row">Python</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SERVEIS -->
+  <section id="serveis" class="section-pad">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="badge-soft">QUÈ FEM</span>
+        <h2 class="fw-800 mt-2">Serveis professionals</h2>
+        <p class="text-muted mb-0">Auditories, hardening i monitoratge continu, adaptats al teu entorn.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card glass h-100 reveal-fly">
+            <div class="card-body">
+              <i class="bi bi-search fs-2"></i>
+              <h5 class="mt-3">Auditoria de seguretat</h5>
+              <p class="mb-0">Anàlisi de vulnerabilitats, revisió de configuracions i exposició de serveis. Informe
+                accionable.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card glass h-100 reveal-fly delay-1">
+            <div class="card-body">
+              <i class="bi bi-shield-check fs-2"></i>
+              <h5 class="mt-3">Hardening & millora</h5>
+              <p class="mb-0">Aplicació de bones pràctiques: SSH, TLS, serveis, permisos i actualitzacions controlades.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card glass h-100 reveal-fly delay-2">
+            <div class="card-body">
+              <i class="bi bi-activity fs-2"></i>
+              <h5 class="mt-3">Monitoratge continu</h5>
+              <p class="mb-0">Diag Agent en mode servei: vigilància de processos, logs i paquets amb alertes.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card glass h-100 reveal-fly delay-3">
+            <div class="card-body">
+              <i class="bi bi-life-preserver fs-2"></i>
+              <h5 class="mt-3">Resposta i formació</h5>
+              <p class="mb-0">Tallers per equips tècnics i procediments d'incident response adaptats al client.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APP / DIAG AGENT -->
+  <section id="app" class="section-pad alt-bg">
+    <div class="container">
+      <!-- Text contingut - Centrat -->
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-xl-9">
+          <div class="text-center mb-4">
+            <span class="badge-soft">EINA PROPIA</span>
+            <h2 class="fw-800 mt-2">Diag Agent — <span class="text-gradient">Vitaliy 2025</span> Professional Edition
+            </h2>
+            <p class="lead mb-4">Agent d'auditoria i diagnòstic complet per a sistemes Linux. Una suite professional que
+              integra múltiples eines de seguretat en una única interfície web elegant.</p>
+          </div>
+
+          <div class="row g-3 mb-4">
+            <div class="col-md-6">
+              <ul class="feature-list">
+                <li><i class="bi bi-ui-checks-grid"></i> <b>Dashboard en temps real</b> amb KPI: vulnerabilitats,
+                  paquets,
+                  SSH fails, CPU/Mem/Disk.</li>
+                <li><i class="bi bi-files"></i> <b>Vista organitzada</b>: Vulns, Packages, Services, Logs, SSH Logs,
+                  Nmap,
+                  SSH-Audit, Report.</li>
+                <li><i class="bi bi-filetype-pdf"></i> <b>Export professional</b>: PDF i CSV amb seccions seleccionables
+                  per
+                  a informes executius.</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul class="feature-list">
+                <li><i class="bi bi-braces"></i> <b>API RESTful segura</b> per a integració amb altres sistemes.</li>
+                <li><i class="bi bi-lock"></i> <b>Seguretat integrada</b>: Nmap sanititzat i whitelisting d'arguments.
+                </li>
+                <li><i class="bi bi-gear"></i> <b>Desplegament ràpid</b> amb script d'instal·lació i servei systemd.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="text-center mb-5">
+            <div class="d-inline-flex gap-2">
+              <a href="#funcionalitats" class="btn btn-primary"><i class="bi bi-list-check"></i> Veure
+                funcionalitats</a>
+              <a href="#contacte" class="btn btn-outline-light"><i class="bi bi-lightning-charge"></i> Demana demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARRUSEL A FULL WIDTH -->
+      <div class="row">
+        <div class="col-12">
+          <div class="app-carousel-container-large reveal-fly">
+            <div class="app-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide active">
+                  <img src="Assets/Fotos Web/1.png" alt="Dashboard - Vista general del Diag Agent" loading="lazy" />
+                  <div class="carousel-caption">Dashboard Principal</div>
+                </div>
+                <div class="carousel-slide">
+                  <img src="Assets/Fotos Web/2.png" alt="Vulnerabilitats - Escaneig Trivy" loading="lazy" />
+                  <div class="carousel-caption">Escaneig de Vulnerabilitats</div>
+                </div>
+                <div class="carousel-slide">
+                  <img src="Assets/Fotos Web/3.png" alt="Packages - Gestió de paquets" loading="lazy" />
+                  <div class="carousel-caption">Gestió de Paquets</div>
+                </div>
+                <div class="carousel-slide">
+                  <img src="Assets/Fotos Web/4.png" alt="Services - Monitoratge de serveis" loading="lazy" />
+                  <div class="carousel-caption">Monitoratge de Serveis</div>
+                </div>
+                <div class="carousel-slide">
+                  <img src="Assets/Fotos Web/5.png" alt="Logs - Anàlisi de logs del sistema" loading="lazy" />
+                  <div class="carousel-caption">Anàlisi de Logs</div>
+                </div>
+                <div class="carousel-slide">
+                  <img src="Assets/Fotos Web/6.png" alt="SSH Logs - Auditoria SSH" loading="lazy" />
+                  <div class="carousel-caption">Logs SSH</div>
+                </div>
+                <div class="carousel-slide">
+                  <img src="Assets/Fotos Web/7.png" alt="Nmap - Escaneig de xarxa" loading="lazy" />
+                  <div class="carousel-caption">Escaneig Nmap</div>
+                </div>
+                <div class="carousel-slide">
+                  <img src="Assets/Fotos Web/8.png" alt="SSH Audit - Auditoria SSH professional" loading="lazy" />
+                  <div class="carousel-caption">SSH Audit Professional</div>
+                </div>
+                <div class="carousel-slide">
+                  <img src="Assets/Fotos Web/9.png" alt="Report - Generació d'informes" loading="lazy" />
+                  <div class="carousel-caption">Generació d'Informes</div>
+                </div>
+                <div class="carousel-slide">
+                  <img src="Assets/Fotos Web/10.png" alt="Export - Exportació PDF/CSV" loading="lazy" />
+                  <div class="carousel-caption">Exportació Professional</div>
+                </div>
+              </div>
+
+              <!-- Navigation Arrows -->
+              <button class="carousel-arrow carousel-arrow-left" aria-label="Anterior captura">
+                <i class="bi bi-chevron-left"></i>
+              </button>
+              <button class="carousel-arrow carousel-arrow-right" aria-label="Següent captura">
+                <i class="bi bi-chevron-right"></i>
+              </button>
+
+              <!-- Indicators -->
+              <div class="carousel-indicators">
+                <button class="indicator active" data-slide="0" aria-label="Captura 1"></button>
+                <button class="indicator" data-slide="1" aria-label="Captura 2"></button>
+                <button class="indicator" data-slide="2" aria-label="Captura 3"></button>
+                <button class="indicator" data-slide="3" aria-label="Captura 4"></button>
+                <button class="indicator" data-slide="4" aria-label="Captura 5"></button>
+                <button class="indicator" data-slide="5" aria-label="Captura 6"></button>
+                <button class="indicator" data-slide="6" aria-label="Captura 7"></button>
+                <button class="indicator" data-slide="7" aria-label="Captura 8"></button>
+                <button class="indicator" data-slide="8" aria-label="Captura 9"></button>
+                <button class="indicator" data-slide="9" aria-label="Captura 10"></button>
+              </div>
+
+              <!-- Counter -->
+              <div class="carousel-counter">
+                <span class="current-slide">1</span> / <span class="total-slides">10</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUNCIONALITATS DETALLADES -->
+  <section id="funcionalitats" class="section-pad">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="badge-soft">CAPACITATS TÈCNIQUES</span>
+        <h2 class="fw-800 mt-2">Funcionalitats del Diag Agent</h2>
+        <p class="text-muted mb-0">Tot el que necessites en una única eina professional</p>
+      </div>
+
+      <div class="row g-4 mb-5">
+        <div class="col-lg-4">
+          <div class="card glass h-100 reveal">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="icon-box me-3">
+                  <i class="bi bi-bug fs-3"></i>
+                </div>
+                <h5 class="mb-0">Escaneig de Vulnerabilitats</h5>
+              </div>
+              <p class="mb-3"><b>Integració Trivy</b> per a detecció de CVEs en imatges de contenidors, sistemes de
+                fitxers i paquets del sistema.</p>
+              <ul class="small">
+                <li>Anàlisi d'imatges Docker/Podman</li>
+                <li>Escaneig de sistema de fitxers complert</li>
+                <li>Filtrat per severitat (CRITICAL, HIGH, MEDIUM)</li>
+                <li>Base de dades actualitzada de vulnerabilitats</li>
+                <li>Informes detallats amb descripció i fixes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card glass h-100 reveal delay-1">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="icon-box me-3">
+                  <i class="bi bi-radar fs-3"></i>
+                </div>
+                <h5 class="mb-0">Anàlisi de Xarxa (Nmap)</h5>
+              </div>
+              <p class="mb-3"><b>Nmap integrat</b> amb sanitització de comandaments per a escaneig segur de ports i
+                serveis.</p>
+              <ul class="small">
+                <li>Descobriment de hosts i serveis actius</li>
+                <li>Detecció de versions de serveis</li>
+                <li>Identificació de ports oberts (TCP/UDP)</li>
+                <li>Classificació de ports perillosos</li>
+                <li>Limitació de 250k caràcters de sortida</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card glass h-100 reveal delay-2">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="icon-box me-3">
+                  <i class="bi bi-shield-lock fs-3"></i>
+                </div>
+                <h5 class="mb-0">Auditoria SSH</h5>
+              </div>
+              <p class="mb-3"><b>Parser SSH-Audit</b> professional per a avaluació de configuracions SSH del servidor.
+              </p>
+              <ul class="small">
+                <li>Anàlisi d'algoritmes KEX, Host Key, Encryption, MAC</li>
+                <li>Classificació per nivell de seguretat</li>
+                <li>Detecció d'algoritmes insegurs (MD5, SHA-1, 3DES)</li>
+                <li>Recomanacions de hardening automàtiques</li>
+                <li>Extracció de fingerprints de claus</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mb-5">
+        <div class="col-lg-4">
+          <div class="card glass h-100 reveal">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="icon-box me-3">
+                  <i class="bi bi-box-seam fs-3"></i>
+                </div>
+                <h5 class="mb-0">Gestió de Paquets</h5>
+              </div>
+              <p class="mb-3">Control complet de paquets del sistema amb anàlisi d'actualitzacions.</p>
+              <ul class="small">
+                <li>Llistat de tots els paquets instal·lats</li>
+                <li>Detecció de paquets actualitzables</li>
+                <li>Informació de versions i dipendències</li>
+                <li>Historial d'actualitzacions</li>
+                <li>Integració amb apt/dpkg</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card glass h-100 reveal delay-1">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="icon-box me-3">
+                  <i class="bi bi-diagram-3 fs-3"></i>
+                </div>
+                <h5 class="mb-0">Monitoratge de Serveis</h5>
+              </div>
+              <p class="mb-3">Visibilitat completa de processos i serveis del sistema.</p>
+              <ul class="small">
+                <li>Llistat de processos en execució</li>
+                <li>Detecció de processos sospitosos</li>
+                <li>Whitelist configurable de rutes del sistema</li>
+                <li>Ús de CPU, memòria i estat per procés</li>
+                <li>Identificació de serveis exposats</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="card glass h-100 reveal delay-2">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="icon-box me-3">
+                  <i class="bi bi-file-earmark-text fs-3"></i>
+                </div>
+                <h5 class="mb-0">Anàlisi de Logs</h5>
+              </div>
+              <p class="mb-3">Correlació i anàlisi de logs del sistema per a detecció d'incidents.</p>
+              <ul class="small">
+                <li>Logs de sistema (syslog, kern.log, auth.log)</li>
+                <li>Detecció de fallades SSH (fail2ban compatible)</li>
+                <li>Filtrat temporal i per severitat</li>
+                <li>Patrons de comportament anòmal</li>
+                <li>Exportació de logs filtrats</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="card glass reveal">
+            <div class="card-body p-4">
+              <div class="row align-items-center">
+                <div class="col-md-8">
+                  <h5><i class="bi bi-file-earmark-pdf"></i> Sistema d'Informes Professional</h5>
+                  <p class="mb-0">Genera informes personalitzats en PDF o CSV amb les seccions que necessitis: Trivy,
+                    Nmap, SSH Audit, Logs, Processos, Serveis i més. Perfecte per a presentacions executives o
+                    documentació tècnica.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                  <a href="#contacte" class="btn btn-primary w-100"><i class="bi bi-download"></i> Prova'l ara</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="card glass reveal">
+            <div class="card-body p-4">
+              <h5 class="mb-3"><i class="bi bi-code-slash"></i> API REST Completa</h5>
+              <div class="row">
+                <div class="col-md-6">
+                  <p class="mb-3">Integra el Diag Agent amb les teves eines existents mitjançant la nostra API segura:
+                  </p>
+                  <ul class="feature-list">
+                    <li><i class="bi bi-arrow-right-circle"></i> <code>GET /api/status</code> - Estat general del
+                      sistema</li>
+                    <li><i class="bi bi-arrow-right-circle"></i> <code>POST /api/run_trivy_filtered</code> - Executa
+                      escaneig Trivy</li>
+                    <li><i class="bi bi-arrow-right-circle"></i> <code>POST /api/nmap_scan</code> - Llança escaneig Nmap
+                    </li>
+                    <li><i class="bi bi-arrow-right-circle"></i> <code>POST /api/run_cmd</code> - Executa comandaments
+                      segurs</li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <pre class="code mb-0"><code>// Exemple: Obtenir estat del sistema
+fetch('/api/status')
+  .then(r => r.json())
+  .then(data => {
+    console.log('Vulnerabilitats:', data.vulns);
+    console.log('CPU:', data.cpu + '%');
+    console.log('Memòria:', data.memory + '%');
+  });</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIP -->
+  <section id="equip" class="section-pad">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="badge-soft">PERSONES</span>
+        <h2 class="fw-800 mt-2">Equip</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <div class="card glass team-card reveal-fly">
+            <div class="card-body d-flex align-items-center gap-3">
+              <img src="Assets/foto.jpg" class="avatar-lg rounded-4" alt="Vitaliy Domin" loading="lazy" />
+              <div>
+                <h5 class="mb-1">Vitaliy Domin</h5>
+                <div class="small text-muted">Founder · Especialista en Ciberseguretat i Infraestructures IT</div>
+                <p class="mb-0 mt-2">Obsessió per automatitzar auditories, informes clars i millores mesurables. <span
+                    class="text-gradient">Protect · Detect · Secure</span>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="section-pad alt-bg">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <h2 class="fw-800">Sobre <span class="text-gradient">Cybershield</span></h2>
+          <p>Projecte intermodular que simula una empresa real: <b>auditories de seguretat</b>, <b>anàlisi de
+              vulnerabilitats</b> i <b>plans de millora</b> per a entorns educatius i corporatius. Metodologia SCRUM,
+            eines de codi obert i cultura d'evidència.</p>
+          <ul class="list-unstyled check-list">
+            <li><i class="bi bi-check2"></i> Entorns Linux Ubuntu Server LTS i virtualització.</li>
+            <li><i class="bi bi-check2"></i> VLANs, LDAP, serveis web i monitoratge.</li>
+            <li><i class="bi bi-check2"></i> Informes accionables per executives i tècnics.</li>
+          </ul>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="Assets/shield.png" class="img-fluid rounded-4 shadow-xxl reveal-fly" alt="Infraestructura i xarxes"
+            loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARIFES -->
+  <section id="tarifes" class="section-pad">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="badge-soft">PLANS</span>
+        <h2 class="fw-800 mt-2">Tarifes <span class="currency-badge">€ EUR</span></h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="price-card reveal">
+            <div class="price-header">
+              <h5>Start</h5>
+              <div class="price"><span>€</span>399</div>
+              <div class="period">per auditoria</div>
+            </div>
+            <ul>
+              <li>Auditoria puntual (1 servidor)</li>
+              <li>Informe PDF/CSV</li>
+              <li>Recomanacions bàsiques</li>
+            </ul>
+            <a href="#contacte" class="btn btn-outline-light w-100">Contracta</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="price-card featured reveal">
+            <div class="price-header">
+              <h5>Pro</h5>
+              <div class="price"><span>€</span>699.99</div>
+              <div class="period">per mes</div>
+            </div>
+            <ul>
+              <li>Monitoratge continu (fins 5 servidors)</li>
+              <li>Diag Agent com a servei</li>
+              <li>Sessions de millora mensuals</li>
+            </ul>
+            <a href="#contacte" class="btn btn-primary w-100">Contracta</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="price-card reveal">
+            <div class="price-header">
+              <h5>Enterprise</h5>
+              <div class="price">A mida</div>
+              <div class="period">projecte</div>
+            </div>
+            <ul>
+              <li>Alta disponibilitat · HA</li>
+              <li>Integració SIEM / dashboards</li>
+              <li>Procediments IR & formació</li>
+            </ul>
+            <a href="#contacte" class="btn btn-outline-light w-100">Parlem-ne</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAULA COMPARATIVA -->
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="card glass reveal">
+            <div class="card-body p-4">
+              <h5 class="text-center mb-4"><i class="bi bi-table"></i> Comparativa de Plans</h5>
+              <div class="table-responsive">
+                <table class="table table-comparison mb-0">
+                  <thead>
+                    <tr>
+                      <th>Funcionalitat</th>
+                      <th class="text-center">Start</th>
+                      <th class="text-center featured-col">Pro</th>
+                      <th class="text-center">Enterprise</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Auditoria inicial</td>
+                      <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                      <td class="text-center featured-col"><i class="bi bi-check-circle-fill text-success"></i></td>
+                      <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                    </tr>
+                    <tr>
+                      <td>Informe PDF/CSV</td>
+                      <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                      <td class="text-center featured-col"><i class="bi bi-check-circle-fill text-success"></i></td>
+                      <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                    </tr>
+                    <tr>
+                      <td>Recomanacions de seguretat</td>
+                      <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                      <td class="text-center featured-col"><i class="bi bi-check-circle-fill text-success"></i></td>
+                      <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                    </tr>
+                    <tr>
+                      <td>Monitoratge continu</td>
+                      <td class="text-center"><i class="bi bi-x-circle text-muted"></i></td>
+                      <td class="text-center featured-col"><i class="bi bi-check-circle-fill text-success"></i></td>
+                      <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                    </tr>
+                    <tr>
+                      <td>Diag Agent com a servei</td>
+                      <td class="text-center"><i class="bi bi-x-circle text-muted"></i></td>
+                      <td class="text-center featured-col"><i class="bi bi-check-circle-fill text-success"></i></td>
+                      <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                    </tr>
+                    <tr>
+                      <td>Suport prioritari 24/7</td>
+                      <td class="text-center"><i class="bi bi-x-circle text-muted"></i></td>
+                      <td class="text-center featured-col"><i class="bi bi-check-circle-fill text-success"></i></td>
+                      <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                    </tr>
+                    <tr>
+                      <td>Sessions de millora mensuals</td>
+                      <td class="text-center"><i class="bi bi-x-circle text-muted"></i></td>
+                      <td class="text-center featured-col"><i class="bi bi-check-circle-fill text-success"></i></td>
+                      <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                    </tr>
+                    <tr>
+                      <td>Integració SIEM / Dashboards</td>
+                      <td class="text-center"><i class="bi bi-x-circle text-muted"></i></td>
+                      <td class="text-center featured-col"><i class="bi bi-x-circle text-muted"></i></td>
+                      <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                    </tr>
+                    <tr>
+                      <td>Procediments IR i formació</td>
+                      <td class="text-center"><i class="bi bi-x-circle text-muted"></i></td>
+                      <td class="text-center featured-col"><i class="bi bi-x-circle text-muted"></i></td>
+                      <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                    </tr>
+                    <tr>
+                      <td>Alta disponibilitat (HA)</td>
+                      <td class="text-center"><i class="bi bi-x-circle text-muted"></i></td>
+                      <td class="text-center featured-col"><i class="bi bi-x-circle text-muted"></i></td>
+                      <td class="text-center"><i class="bi bi-check-circle-fill text-success"></i></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="small text-center text-muted mt-3">*Preus orientatius. Personalitzables segons abast.</p>
+    </div>
+  </section>
+
+  <!-- CONTACTE -->
+  <section id="contacte" class="section-pad alt-bg">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <h2 class="fw-800">Parlem de la teva seguretat</h2>
+          <p>Omple el formulari i et contactarem per planificar una auditoria o demo del Diag Agent.</p>
+          <form id="contactForm" class="card glass p-3 mt-3">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Nom i cognoms</label>
+                <input type="text" class="form-control" name="name" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Empresa</label>
+                <input type="text" class="form-control" name="company">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Telèfon</label>
+                <input type="tel" class="form-control" name="phone">
+              </div>
+              <div class="col-12">
+                <label class="form-label">Missatge</label>
+                <textarea class="form-control" name="message" rows="4" required></textarea>
+              </div>
+              <div class="col-12 d-flex align-items-center gap-2">
+                <input class="form-check-input" type="checkbox" id="privacy" required>
+                <label class="form-check-label small" for="privacy">Accepto la <a href="#" class="link-light"
+                    data-bs-toggle="modal" data-bs-target="#policyModal">política de privacitat</a></label>
+              </div>
+              <div class="col-12 d-grid">
+                <button class="btn btn-primary btn-lg" type="submit"><i class="bi bi-send"></i> Envia</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-6">
+          <div class="card glass p-3 h-100">
+            <h5><i class="bi bi-info-circle"></i> Informació</h5>
+            <p class="mb-2">Cybershield Solutions, S.L. · Tortosa (Tarragona)</p>
+            <p class="mb-2">Email: <a href="mailto:info@cybershield.local" class="link-light">info@cybershield.local</a>
+            </p>
+            <p class="mb-0">Xarxes:
+              <a href="#" class="link-light"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="link-light ms-2"><i class="bi bi-github"></i></a>
+              <a href="#" class="link-light ms-2"><i class="bi bi-twitter-x"></i></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section-pad">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="badge-soft">DUBTES</span>
+        <h2 class="fw-800 mt-2">Preguntes Freqüents</h2>
+        <p class="text-muted mb-0">Respostes a les consultes més habituals</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion accordion-dark" id="faqAccordion">
+            <!-- FAQ 1 -->
+            <div class="accordion-item reveal">
+              <h2 class="accordion-header" id="faq1h">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1"
+                  aria-expanded="true" aria-controls="faq1">
+                  <i class="bi bi-question-circle me-2"></i> Què és el Diag Agent i com funciona?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faq1h"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  El <strong>Diag Agent</strong> és una eina d'auditoria i diagnòstic desenvolupada en Python amb Flask
+                  per a sistemes Linux. Integra <strong>Trivy</strong> (escaneig de vulnerabilitats),
+                  <strong>Nmap</strong> (anàlisi de xarxa) i <strong>SSH-Audit</strong> en una única interfície web
+                  professional. S'instal·la al servidor mitjançant un script automatitzat, s'executa com a servei
+                  systemd i ofereix un <strong>SOC Dashboard</strong> en temps real amb exportació d'informes.
+                </div>
+              </div>
+            </div>
+            <!-- FAQ 2 -->
+            <div class="accordion-item reveal delay-1">
+              <h2 class="accordion-header" id="faq2h">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                  <i class="bi bi-question-circle me-2"></i> Quant de temps triga una auditoria?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2h" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  L'<strong>escaneig automatitzat</strong> amb Diag Agent genera resultats en <strong>pocs
+                    minuts</strong> i pots descarregar l'informe PDF immediatament. Per a <strong>auditories
+                    completes</strong> (que inclouen anàlisi manual, revisió física de la infraestructura i elaboració
+                  d'un pla de millora detallat), el temps depèn de la complexitat del sistema, però normalment es
+                  completen en <strong>1-2 setmanes</strong>.
+                </div>
+              </div>
+            </div>
+            <!-- FAQ 3 -->
+            <div class="accordion-item reveal delay-2">
+              <h2 class="accordion-header" id="faq3h">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                  <i class="bi bi-question-circle me-2"></i> Els informes PDF es poden modificar?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3h" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  No. Tots els informes PDF generats per Diag Agent inclouen una <strong>signatura digital</strong> que
+                  garanteix la seva autenticitat i integritat. Això permet verificar que el document no ha estat
+                  modificat després de la seva generació, oferint garanties legals i tècniques sobre els resultats de
+                  l'auditoria.
+                </div>
+              </div>
+            </div>
+            <!-- FAQ 4 -->
+            <div class="accordion-item reveal delay-3">
+              <h2 class="accordion-header" id="faq4h">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                  <i class="bi bi-question-circle me-2"></i> Puc deixar l'eina instal·lada per monitoratge continu?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faq4h" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Sí! Un cop finalitzada l'auditoria, el Diag Agent pot <strong>romandre instal·lat</strong> al servidor
+                  si ho desitges. Això permet que el teu equip tècnic pugui fer <strong>monitoratges periòdics</strong>
+                  i auditories internes de seguretat de forma autònoma. Si prefereixes, també podem procedir a la
+                  <strong>desinstal·lació completa</strong>, deixant el sistema exactament com estava.
+                </div>
+              </div>
+            </div>
+            <!-- FAQ 5 -->
+            <div class="accordion-item reveal delay-3">
+              <h2 class="accordion-header" id="faq5h">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                  <i class="bi bi-question-circle me-2"></i> És segur instal·lar l'agent al meu servidor?
+                </button>
+              </h2>
+              <div id="faq5" class="accordion-collapse collapse" aria-labelledby="faq5h" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Absolutament. El Diag Agent s'executa <strong>100% localment</strong> i no envia cap dada a servidors
+                  externs sense el teu consentiment explícit. Implementa <strong>sanitització de comandaments</strong>
+                  per prevenir injeccions i <strong>whitelisting d'arguments</strong> per a Nmap. El codi és auditable,
+                  basat en eines de codi obert i segueix bones pràctiques de seguretat.
+                </div>
+              </div>
+            </div>
+            <!-- FAQ 6 -->
+            <div class="accordion-item reveal delay-3">
+              <h2 class="accordion-header" id="faq6h">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+                  <i class="bi bi-question-circle me-2"></i> Quins formats d'informe genereu?
+                </button>
+              </h2>
+              <div id="faq6" class="accordion-collapse collapse" aria-labelledby="faq6h" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Diag Agent genera informes en <strong>PDF professional</strong> (amb portada corporativa, taula de
+                  resum executiu i detalls tècnics) i en <strong>CSV</strong> (per tractar les dades en fulls de
+                  càlcul). L'usuari pot <strong>seleccionar quines seccions incloure</strong>: vulnerabilitats, Nmap,
+                  SSH-Audit, logs, processos, serveis o l'informe complet.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTÍCIES / BLOG -->
+  <section id="noticies" class="section-pad">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="badge-soft">BLOG</span>
+        <h2 class="fw-800 mt-2">Notícies i apunts tècnics</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <article class="card glass h-100 reveal">
+            <div class="card-body">
+              <div class="small text-muted">Novembre 2025</div>
+              <h5 class="mt-1">Alliberem Diag Agent v1.0</h5>
+              <p class="mb-0">Inclou export PDF, CSV, Nmap segur i mòdul SSH-Audit. Ideal per auditories internes.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="card glass h-100 reveal delay-1">
+            <div class="card-body">
+              <div class="small text-muted">Novembre 2025</div>
+              <h5 class="mt-1">Bones pràctiques SSH 2025</h5>
+              <p class="mb-0">Claus ed25519, fail2ban, banners legals i restricció per IP. Guia ràpida per admins.</p>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <article class="card glass h-100 reveal delay-2">
+            <div class="card-body">
+              <div class="small text-muted">Octubre 2025</div>
+              <h5 class="mt-1">Checklist d'auditoria Linux</h5>
+              <p class="mb-0">Paquets, serveis, logs, ports, còpies i actualitzacions: el nostre checklist operatiu.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-between gap-3">
+      <div class="small">© <span id="year"></span> Cybershield Solutions, S.L.</div>
+      <div class="small">
+        <!-- AQUEST ENLLAÇ OBRIX LA MODAL -->
+        <a href="#" class="link-light" data-bs-toggle="modal" data-bs-target="#policyModal">Política de privacitat</a> ·
+        <a href="#" class="link-light" data-bs-toggle="modal" data-bs-target="#termsModal">Termes</a> ·
+        <a href="#inici" class="link-light">Torna amunt</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL: Política de privacitat i seguretat -->
+  <div class="modal fade" id="policyModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+      <div class="modal-content glass">
+        <div class="modal-header border-0">
+          <h5 class="modal-title"><i class="bi bi-shield-lock"></i> Política de privacitat i seguretat</h5>
+          <a class="btn btn-outline-light btn-sm me-2" href="Assets/politica_seguretat.pdf">
+            <i class="bi bi-download"></i> Descarrega (PDF)
+          </a>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tanca"></button>
+        </div>
+
+        <div class="modal-body">
+          <div class="accordion accordion-dark" id="accPolitica">
+            <!-- PRIVACITAT (RGPD) -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="p0h">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#p0"
+                  aria-expanded="true" aria-controls="p0">
+                  <i class="bi bi-person-lock me-2"></i> Privacitat (RGPD)
+                </button>
+              </h2>
+              <div id="p0" class="accordion-collapse collapse show" aria-labelledby="p0h" data-bs-parent="#accPolitica">
+                <div class="accordion-body">
+                  <ul class="feature-list">
+                    <li><i class="bi bi-check2-circle"></i> Responsable: Cybershield Solutions, S.L.</li>
+                    <li><i class="bi bi-check2-circle"></i> Finalitats: resposta de sol·licituds i gestió de serveis.
+                    </li>
+                    <li><i class="bi bi-check2-circle"></i> Base jurídica: consentiment i execució de contracte.</li>
+                    <li><i class="bi bi-check2-circle"></i> Drets: accés, rectificació, supressió, limitació i oposició
+                      a <a class="link-light" href="mailto:privacy@cybershield.local">privacy@cybershield.local</a>.
+                    </li>
+                    <li><i class="bi bi-check2-circle"></i> Conservació: el temps necessari per a la finalitat i
+                      obligacions legals.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- PRINCIPIS DE SEGURETAT -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="p1h">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p1"
+                  aria-expanded="false" aria-controls="p1">
+                  <i class="bi bi-flag me-2"></i> Principis de seguretat
+                </button>
+              </h2>
+              <div id="p1" class="accordion-collapse collapse" aria-labelledby="p1h" data-bs-parent="#accPolitica">
+                <div class="accordion-body">
+                  <ul class="feature-list">
+                    <li><i class="bi bi-check2-circle"></i> Decisions basades en anàlisi de risc.</li>
+                    <li><i class="bi bi-check2-circle"></i> Least-privilege, segmentació i hardening.</li>
+                    <li><i class="bi bi-check2-circle"></i> Traçabilitat i registre d’esdeveniments.</li>
+                    <li><i class="bi bi-check2-circle"></i> Millora contínua i revisions periòdiques.</li>
+                    <li><i class="bi bi-check2-circle"></i> Privacitat per disseny.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- CONTROLS CLAU -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="p2h">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p2"
+                  aria-expanded="false" aria-controls="p2">
+                  <i class="bi bi-gear-wide-connected me-2"></i> Controls clau
+                </button>
+              </h2>
+              <div id="p2" class="accordion-collapse collapse" aria-labelledby="p2h" data-bs-parent="#accPolitica">
+                <div class="accordion-body">
+                  <ul class="feature-list">
+                    <li><i class="bi bi-dot"></i> MFA i gestió robusta de credencials.</li>
+                    <li><i class="bi bi-dot"></i> Xifrat en trànsit (TLS 1.2+) i en repòs.</li>
+                    <li><i class="bi bi-dot"></i> Inventari + escaneig de vulnerabilitats i parchats controlats.</li>
+                    <li><i class="bi bi-dot"></i> Còpies 3-2-1 amb proves de restauració.</li>
+                    <li><i class="bi bi-dot"></i> Monitoratge i alertes (logs, integritat, anomalies).</li>
+                    <li><i class="bi bi-dot"></i> Procediments d’IR i formació d’usuaris.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- ALINEACIÓ NORMATIVA -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="p3h">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p3"
+                  aria-expanded="false" aria-controls="p3">
+                  <i class="bi bi-journal-check me-2"></i> Alineació i marc normatiu
+                </button>
+              </h2>
+              <div id="p3" class="accordion-collapse collapse" aria-labelledby="p3h" data-bs-parent="#accPolitica">
+                <div class="accordion-body">
+                  <ul class="feature-list">
+                    <li><i class="bi bi-flag"></i> <b>ENS</b> — Alineació progressiva amb controls organitzatius,
+                      operatius i de protecció.</li>
+                    <li><i class="bi bi-flag"></i> <b>CCN-STIC</b> — Guies sèries 800/900 com a referència tècnica.</li>
+                    <li><i class="bi bi-flag"></i> <b>ISO/IEC 27001</b> — Inspiració per a SGSI (abast, riscos i
+                      controls).</li>
+                    <li><i class="bi bi-flag"></i> <b>RGPD</b> — Principis de minimització i registre d’activitats.</li>
+                  </ul>
+                  <p class="small opacity-75 mb-0">* Es tracta d’un <b>compromís d’alineació</b>; no implica
+                    certificació oficial.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ROADMAP -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="p4h">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p4"
+                  aria-expanded="false" aria-controls="p4">
+                  <i class="bi bi-calendar-check me-2"></i> Roadmap de compliment
+                </button>
+              </h2>
+              <div id="p4" class="accordion-collapse collapse" aria-labelledby="p4h" data-bs-parent="#accPolitica">
+                <div class="accordion-body">
+                  <ul class="feature-list">
+                    <li><i class="bi bi-arrow-right-circle"></i> Q4 2025: Inventari d’actius, política marc i rols.</li>
+                    <li><i class="bi bi-arrow-right-circle"></i> Q1 2026: Logging centralitzat, MFA, backups 3-2-1.</li>
+                    <li><i class="bi bi-arrow-right-circle"></i> Q2 2026: Vulnerabilitats + parchats mensuals; proves
+                      DR.</li>
+                    <li><i class="bi bi-arrow-right-circle"></i> Q3 2026: BIA/BCP/DRP i simulacres d’incidents.</li>
+                    <li><i class="bi bi-arrow-right-circle"></i> Q4 2026: Auditoria externa d’alineació ENS.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- RESPONSABILITATS -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="p5h">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p5"
+                  aria-expanded="false" aria-controls="p5">
+                  <i class="bi bi-people me-2"></i> Responsabilitats i contacte
+                </button>
+              </h2>
+              <div id="p5" class="accordion-collapse collapse" aria-labelledby="p5h" data-bs-parent="#accPolitica">
+                <div class="accordion-body">
+                  <ul class="feature-list">
+                    <li><i class="bi bi-person-badge"></i> Responsable de seguretat (RSSI) i equips d’Incident Response.
+                    </li>
+                    <li><i class="bi bi-envelope"></i> Contacte: <a class="link-light"
+                        href="mailto:security@cybershield.local">security@cybershield.local</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div><!-- /accordion -->
+        </div>
+
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Tanca</button>
+          <a class="btn btn-primary" href="Assets/politica_seguretat.pdf"><i class="bi bi-download"></i> Descarrega
+            PDF</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Termes i Condicions -->
+  <div class="modal fade" id="termsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+      <div class="modal-content glass">
+        <div class="modal-header border-0">
+          <h5 class="modal-title"><i class="bi bi-file-earmark-text"></i> Termes i Condicions</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tanca"></button>
+        </div>
+
+        <div class="modal-body">
+          <div class="accordion accordion-dark" id="accTermes">
+            <!-- TERMES D'ÚS WEB -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="t0h">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#t0"
+                  aria-expanded="true" aria-controls="t0">
+                  <i class="bi bi-globe me-2"></i> Termes d'ús del lloc web
+                </button>
+              </h2>
+              <div id="t0" class="accordion-collapse collapse show" aria-labelledby="t0h" data-bs-parent="#accTermes">
+                <div class="accordion-body">
+                  <ul class="feature-list">
+                    <li><i class="bi bi-check2-circle"></i> L'accés i navegació a aquest lloc web implica l'acceptació
+                      dels presents termes i condicions.</li>
+                    <li><i class="bi bi-check2-circle"></i> Cybershield Solutions, S.L. es reserva el dret de modificar
+                      aquests termes en qualsevol moment.</li>
+                    <li><i class="bi bi-check2-circle"></i> L'usuari es compromet a fer un ús adequat dels continguts i
+                      serveis oferits.</li>
+                    <li><i class="bi bi-check2-circle"></i> Està prohibit l'ús del lloc web amb finalitats il·lícites o
+                      que puguin perjudicar tercers.</li>
+                    <li><i class="bi bi-check2-circle"></i> Els continguts del web són merament informatius i no
+                      constitueixen assessorament professional.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- TERMES D'ÚS APLICACIÓ -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="t1h">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t1"
+                  aria-expanded="false" aria-controls="t1">
+                  <i class="bi bi-app-indicator me-2"></i> Termes d'ús de l'aplicació Diag Agent
+                </button>
+              </h2>
+              <div id="t1" class="accordion-collapse collapse" aria-labelledby="t1h" data-bs-parent="#accTermes">
+                <div class="accordion-body">
+                  <ul class="feature-list">
+                    <li><i class="bi bi-dot"></i> <b>Llicència:</b> Diag Agent s'ofereix sota llicència d'ús limitada,
+                      no exclusiva i intransferible.</li>
+                    <li><i class="bi bi-dot"></i> <b>Ús permès:</b> Exclusivament per a auditories de seguretat en
+                      sistemes dels quals l'usuari tingui autorització.</li>
+                    <li><i class="bi bi-dot"></i> <b>Prohibicions:</b> Està prohibit realitzar enginyeria inversa,
+                      modificar o redistribuir l'aplicació.</li>
+                    <li><i class="bi bi-dot"></i> <b>Actualitzacions:</b> Cybershield pot publicar actualitzacions que
+                      l'usuari haurà d'instal·lar per mantenir el suport.</li>
+                    <li><i class="bi bi-dot"></i> <b>Dades:</b> L'aplicació processa dades locals del sistema; cap dada
+                      s'envia a servidors externs sense consentiment.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- PROPIETAT INTEL·LECTUAL -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="t2h">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t2"
+                  aria-expanded="false" aria-controls="t2">
+                  <i class="bi bi-c-circle me-2"></i> Propietat intel·lectual
+                </button>
+              </h2>
+              <div id="t2" class="accordion-collapse collapse" aria-labelledby="t2h" data-bs-parent="#accTermes">
+                <div class="accordion-body">
+                  <ul class="feature-list">
+                    <li><i class="bi bi-shield-check"></i> Tots els continguts (textos, imatges, logotips, codi font)
+                      són propietat de Cybershield Solutions, S.L.</li>
+                    <li><i class="bi bi-shield-check"></i> Les marques, noms comercials i signes distintius estan
+                      protegits per la legislació vigent.</li>
+                    <li><i class="bi bi-shield-check"></i> Queda prohibida la reproducció, distribució o transformació
+                      sense autorització expressa.</li>
+                    <li><i class="bi bi-shield-check"></i> L'ús de les eines open-source integrades es regeix per les
+                      seves respectives llicències.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- LIMITACIÓ DE RESPONSABILITAT -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="t3h">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t3"
+                  aria-expanded="false" aria-controls="t3">
+                  <i class="bi bi-exclamation-triangle me-2"></i> Limitació de responsabilitat
+                </button>
+              </h2>
+              <div id="t3" class="accordion-collapse collapse" aria-labelledby="t3h" data-bs-parent="#accTermes">
+                <div class="accordion-body">
+                  <ul class="feature-list">
+                    <li><i class="bi bi-info-circle"></i> Cybershield no garanteix la disponibilitat contínua ni
+                      l'absència d'errors del lloc web o aplicació.</li>
+                    <li><i class="bi bi-info-circle"></i> No ens fem responsables de danys derivats de l'ús inadequat de
+                      les eines o informes.</li>
+                    <li><i class="bi bi-info-circle"></i> Els resultats de les auditories són orientatius i no
+                      substitueixen una avaluació professional completa.</li>
+                    <li><i class="bi bi-info-circle"></i> L'usuari és responsable de les accions realitzades amb la
+                      informació obtinguda.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- LLEI APLICABLE -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="t4h">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t4"
+                  aria-expanded="false" aria-controls="t4">
+                  <i class="bi bi-bank me-2"></i> Llei aplicable i jurisdicció
+                </button>
+              </h2>
+              <div id="t4" class="accordion-collapse collapse" aria-labelledby="t4h" data-bs-parent="#accTermes">
+                <div class="accordion-body">
+                  <ul class="feature-list">
+                    <li><i class="bi bi-flag"></i> Aquests termes es regeixen per la legislació espanyola.</li>
+                    <li><i class="bi bi-flag"></i> Per a qualsevol controvèrsia, les parts se sotmeten als jutjats i
+                      tribunals de Tarragona.</li>
+                    <li><i class="bi bi-flag"></i> Última actualització: Desembre 2025.</li>
+                  </ul>
+                  <p class="small opacity-75 mb-0 mt-3">Contacte legal: <a class="link-light"
+                      href="mailto:legal@cybershield.local">legal@cybershield.local</a></p>
+                </div>
+              </div>
+            </div>
+          </div><!-- /accordion -->
+        </div>
+
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Tanca</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COOKIE CONSENT BANNER -->
+  <div id="cookieBanner" class="cookie-banner">
+    <div class="cookie-content">
+      <div class="cookie-text">
+        <i class="bi bi-cookie fs-4"></i>
+        <div>
+          <strong>Utilitzem cookies</strong>
+          <p class="mb-0 small">Aquest lloc web utilitza cookies per millorar la teva experiència. Pots acceptar només
+            les essencials (tècniques) o totes (incloent analítiques).</p>
+        </div>
+      </div>
+      <div class="cookie-buttons">
+        <button id="cookieEssential" class="btn btn-outline-light btn-sm">Només essencials</button>
+        <button id="cookieAll" class="btn btn-primary btn-sm">Acceptar totes</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING CONTACT BUTTONS -->
+  <div class="floating-buttons">
+    <a href="https://wa.me/34600000000" target="_blank" class="floating-btn whatsapp" aria-label="WhatsApp">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+    <a href="https://t.me/cybershield" target="_blank" class="floating-btn telegram" aria-label="Telegram">
+      <i class="bi bi-telegram"></i>
+    </a>
+  </div>
+
+  <!-- Back to top -->
+  <button id="backToTop" class="back-to-top" aria-label="Torna a l'inici"><i class="bi bi-arrow-up"></i></button>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Els teus scripts -->
+  <script src="custom.js"></script>
+</body>
+
+</html>

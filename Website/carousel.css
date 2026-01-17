@@ -1,0 +1,302 @@
+/* ========== APP CAROUSEL ========== */
+.app-carousel-container-large {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.app-carousel-container-large .carousel-track {
+    min-height: 800px;
+}
+
+.app-carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.app-carousel {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(13, 20, 38, .95), rgba(10, 17, 34, .95));
+    border: 1px solid rgba(0, 212, 255, .3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .6), 0 0 80px rgba(0, 212, 255, .15);
+    backdrop-filter: blur(20px);
+}
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(7, 11, 26, .3);
+    overflow: hidden;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1), transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.carousel-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .5);
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 24px;
+    background: rgba(7, 11, 26, .95);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(0, 212, 255, .3);
+    border-radius: 999px;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .4);
+    white-space: nowrap;
+}
+
+/* Navigation Arrows */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, rgba(0, 212, 255, .2), rgba(156, 39, 255, .2));
+    border: 1px solid rgba(0, 212, 255, .4);
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+    color: var(--text);
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-arrow:hover {
+    background: linear-gradient(135deg, rgba(0, 212, 255, .4), rgba(156, 39, 255, .4));
+    border-color: var(--accent-neon);
+    box-shadow: 0 0 30px rgba(0, 212, 255, .5);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-arrow-left {
+    left: 16px;
+}
+
+.carousel-arrow-right {
+    right: 16px;
+}
+
+/* Indicators */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+    background: rgba(7, 11, 26, .6);
+    padding: 8px 12px;
+    border-radius: 999px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 212, 255, .2);
+}
+
+.carousel-indicators .indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 212, 255, .4);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.carousel-indicators .indicator:hover {
+    background: rgba(0, 212, 255, .3);
+    transform: scale(1.2);
+}
+
+.carousel-indicators .indicator.active {
+    width: 24px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--accent-neon), var(--accent-purple));
+    border-color: var(--accent-neon);
+    box-shadow: 0 0 10px rgba(0, 212, 255, .6);
+}
+
+/* Counter */
+.carousel-counter {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(7, 11, 26, .8);
+    backdrop-filter: blur(10px);
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 212, 255, .3);
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+    z-index: 10;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .4);
+}
+
+.carousel-counter .current-slide {
+    color: var(--accent-neon);
+}
+
+/* Auto-play indicator */
+.carousel-autoplay-indicator {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background: rgba(7, 11, 26, .8);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    border: 2px solid rgba(0, 212, 255, .3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-autoplay-indicator:hover {
+    border-color: var(--accent-neon);
+    box-shadow: 0 0 20px rgba(0, 212, 255, .4);
+}
+
+.carousel-autoplay-indicator i {
+    font-size: 16px;
+    color: var(--accent-neon);
+}
+
+.carousel-autoplay-indicator.paused i::before {
+    content: "\f4f4";
+    /* bi-play-fill */
+}
+
+.carousel-autoplay-indicator.playing i::before {
+    content: "\f4ea";
+    /* bi-pause-fill */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-track {
+        min-height: 400px;
+    }
+
+    .app-carousel-container-large .carousel-track {
+        min-height: 500px;
+    }
+
+    .carousel-slide {
+        padding: 15px;
+    }
+
+    .carousel-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .carousel-arrow-left {
+        left: 8px;
+    }
+
+    .carousel-arrow-right {
+        right: 8px;
+    }
+
+    .carousel-indicators {
+        bottom: 12px;
+        gap: 6px;
+    }
+
+    .carousel-indicators .indicator {
+        width: 6px;
+        height: 6px;
+    }
+
+    .carousel-indicators .indicator.active {
+        width: 18px;
+    }
+
+    .carousel-counter {
+        font-size: 12px;
+        padding: 6px 12px;
+        top: 12px;
+        right: 12px;
+    }
+
+    .carousel-caption {
+        font-size: 12px;
+        padding: 12px 16px;
+    }
+}
+
+/* Swipe animation */
+.carousel-slide.slide-out-left {
+    animation: slideOutLeft 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.carousel-slide.slide-out-right {
+    animation: slideOutRight 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes slideOutLeft {
+    to {
+        opacity: 0;
+        transform: translateX(-20%) scale(0.95);
+    }
+}
+
+@keyframes slideOutRight {
+    to {
+        opacity: 0;
+        transform: translateX(20%) scale(0.95);
+    }
+}
