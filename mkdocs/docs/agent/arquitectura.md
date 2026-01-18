@@ -30,6 +30,7 @@ flowchart TB
         SSHAudit["ssh-audit"]
         E4L["enum4linux-ng"]
         PTAgent["pentest_agent.py"]
+        Scapy["Scapy Engine"]
     end
     
     subgraph Output["Output"]
@@ -194,14 +195,15 @@ sequenceDiagram
 
 | Línies | Descripció |
 |--------|------------|
-| 1-38 | Imports i configuració |
+| 1-38 | Imports i configuració (ara inclou Scapy) |
 | 39-623 | SSHAuditParser |
 | 624-1053 | NmapParser |
 | 1054-1150 | Seguretat (Hardening) i Helpers |
 | 1151-1800 | UI HTML/CSS/JS (Protecció XSS) |
-| 1801-2100 | SOC Dashboard i Monitoratge |
-| 2101-2800 | Pentest Wrapper i API |
-| 2801-6715+ | Report generation, Telegram, PDF signing i Caché de Trivy |
+| 1801-1907 | SOC Dashboard Metrics |
+| 1908-2022 | **Network IDS (Classe NetworkMonitor)** |
+| 2023-2800 | Pentest Wrapper i API |
+| 2801-7100+ | Report generation, Telegram, PDF signing i Caché de Trivy |
 
 ---
 

@@ -133,6 +133,35 @@ Cada vegada que el scanner proba un fitxer sensible, crida `_classify_exposure()
 
 ---
 
+### 4. `NetworkMonitor` (diag_agent_single.py, línies 1916-2025)
+
+Aquest mòdul és el responsable del **Advanced Traffic Analytics**, implementant una inspecció profunda de paquets (DPI).
+
+**Atributs i Lògica:**
+```python
+class NetworkMonitor:
+    def __init__(self):
+        self.alerts = deque(maxlen=500)     # Buffer d'alertes
+        self.packets = deque(maxlen=100)    # Live feed
+        self.ip_stats = defaultdict(dict)    # Única IP Tracker (TCP, UDP, Ports)
+        self.top_talkers = defaultdict(int) # Volum de dades
+        
+        # Ports perillosos monitoritzats
+        self.danger_ports = {21: "FTP", 23: "Telnet", 445: "SMB/AD", 3389: "RDP"}
+```
+
+**Mètodes clau:**
+
+| Mètode | Funció | Responsabilitat |
+|---|---|---|
+| `start()` | Inici | Llança el fil `sniffer` de Scapy en segon pla. |
+| `_get_local_ips()` | Filtre | Detecta les IPs de la màquina per evitar el "self-tracking". |
+| `_packet_callback(pkt)` | Processament | Analitza cada paquet, ignora trànsit local i calcula hits. |
+| `_classify_traffic()` | IA Analyst | Motor heurístic que classifica events ({Port Scan, Brute Force, DoS}). |
+| `add_alert()` | Sistema d'Alertes | Insereix alertes amb resum d'analista, evidències i accions. |
+
+---
+
 ## Funcions Clau - Deep Dive
 
 ### `_classify_exposure()` (pentest_agent.py, línies 1886-1959)
@@ -436,8 +465,9 @@ threading.Thread(target=refresh_trivy_cache, daemon=True).start()
 
 | Component | Línies | Classes | Funcions | Complexitat |
 |-----------|--------|---------|----------|-------------|
-| `diag_agent_single.py` | 6.715 | 5 | 80+ | Alta |
+| `diag_agent_single.py` | 7.100+ | 6 | 90+ | Molt Alta |
 | `pentest_agent.py` | 3.141 | 7 | 60+ | Molt Alta |
+| **NetworkMonitor** | 110 | 1 | 6 | Alta |
 | **ExplanationDatabase** | 50 | 1 | 1 | Baixa |
 | **_classify_exposure** | 75 | - | 1 | Alta |
 | **generate_pentest_report_pdf** | 220 | - | 1 | Mitja |

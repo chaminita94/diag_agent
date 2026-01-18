@@ -79,8 +79,8 @@ firefox http://192.168.1.100:8080
 
 | Fitxer | Línies | Descripció |
 |--------|--------|------------|
-| `diag_agent_single.py` | ~6.715 | Agent principal amb interfície web |
-| `pentest_agent.py` | ~3.141 | Nou motor de pentesting web |
+| `diag_agent_single.py` | ~7.320 | Agent principal amb interfície web |
+| `pentest_agent.py` | ~3.282 | Nou motor de pentesting web |
 | `setup_diag.sh` | 137 | Script d'instal·lació automatitzat |
 | `Website/index.html` | 1280 | Landing page corporativa |
 | `Website/custom.css` | 1405 | Estils de la web |

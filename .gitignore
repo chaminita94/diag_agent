@@ -15,10 +15,11 @@ env/
 *.swo
 
 # MkDocs build
-mkdocs/site/
+# mkdocs/site/ (Removed to allow uploading building site)
 
-# Certificates (sensitive)
-Diag agent/certs/
+# Project Code (Ignored for docs-only upload)
+Diag agent/
+Website/
 
 # OS files
 .DS_Store
