@@ -8,14 +8,8 @@ venv/
 env/
 .venv/
 
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# MkDocs build
-# mkdocs/site/ (Removed to allow uploading building site)
+# MkDocs
+mkdocs/
 
 # Project Code (Ignored for docs-only upload)
 Diag agent/
