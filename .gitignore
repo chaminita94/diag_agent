@@ -8,8 +8,10 @@ venv/
 env/
 .venv/
 
-# MkDocs
-mkdocs/
+# MkDocs (ignore source, allow built site)
+mkdocs/docs/
+mkdocs/mkdocs.yml
+mkdocs/.cache/
 
 # Project Code (Ignored for docs-only upload)
 Diag agent/
