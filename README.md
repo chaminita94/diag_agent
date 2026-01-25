@@ -15,14 +15,17 @@ Pots consultar tota l'explicació tècnica, l'arquitectura del codi i els manual
 ## 🛠️ Sobre el Projecte
 
 **Diag Agent** és un agent de diagnòstic i auditoria de seguretat portàtil (monolític) dissenyat per a entorns de servidors crítics. Integra:
+- **Unified Discovery Scanner**: Reconeixement multi-vector (DNS, SSL, WAF, Dirs, Shodan) amb correcció d'heurística de redireccions.
 - **Web Pentesting**: Motor especialitzat en SQLi, XSS i descobriment de vulnerabilitats.
 - **Network IDS Shield**: Monitoratge de paquets en temps real basat en Scapy amb assistent d'**IA SOC**.
 - **Audit Reports**: Generació de PDFs professionals signats digitalment i exportacions CSV.
 - **Advanced Monitoring**: Dashboard en viu amb mètriques de sistema i xarxa (TCP/UDP).
 
 ## 📄 Estructura del Repositori
-- **`/` (Root)**: Conté el site estàtic generat des del MkDocs (desplegat via GitHub Pages).
-- **Manuals**: Guies detallades sobre Hardening, Pentesting i Monitoratge SOC.
+- **`Diag agent/`**: Full agent source code, setup scripts, and Docker configuration.
+- **`mkdocs/`**: Documentation source files (Markdown).
+- **`docs/`**: Built static site deployed via GitHub Pages (at root).
+- **`Website/`**: Corporate landing page assets.
 
 ---
 *Cybershield Solutions © 2026 — Professional Security Diagnostics*
