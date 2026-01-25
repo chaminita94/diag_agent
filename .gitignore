@@ -13,6 +13,7 @@ mkdocs/
 
 # Project Code (Ignored for docs-only upload)
 Diag agent/
+Backup Diag/
 Website/
 
 # OS files
