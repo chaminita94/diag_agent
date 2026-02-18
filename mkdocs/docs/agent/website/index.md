@@ -1,457 +1,188 @@
-# Website Corporativa — Cybershield Solutions
+# Website Corporativa
 
-**Data:** Febrer 2026  
-**Versió:** 3.0  
-**Estat:** Producció  
-**URL:** [https://cshield.duckdns.org](https://cshield.duckdns.org)
+La pàgina web de **Cybershield Solutions** és el portal públic de l'empresa — el primer punt de contacte amb clients potencials. Accessible a [cshield.duckdns.org](https://cshield.duckdns.org), presenta els serveis d'auditoria, demostra les capacitats del Diag Agent, i converteix visitants en clients.
 
 ---
 
-## Taula de Continguts
+## Proposta de Valor
 
-1. [Visió General](#visió-general)
-2. [Stack Tecnològic](#stack-tecnològic)
-3. [Arquitectura dels Fitxers](#arquitectura-dels-fitxers)
-4. [Seccions de la Pàgina](#seccions-de-la-pàgina)
-5. [Sistema de Disseny](#sistema-de-disseny)
-6. [Motor d'Interactivitat](#motor-dinteractivitat)
-7. [SEO i Metadades](#seo-i-metadades)
-8. [Desplegament i Proxy Revers](#desplegament-i-proxy-revers)
-9. [Accés](#accés)
+### Per què existeix aquesta web?
 
----
+Cybershield necessitava un portal que fes tres coses alhora: **vendre**, **demostrar** i **documentar**. La web resol això amb un disseny que transmet seguretat i professionalitat des del primer segon.
 
-## Visió General
+| Objectiu | Com ho aconseguim |
+|----------|-------------------|
+| **Vendre serveis** | Seccions de serveis, tarifes i formulari de contacte |
+| **Demostrar l'eina** | Carrusel amb 22 captures + demo en viu a [democshield.duckdns.org](https://democshield.duckdns.org) |
+| **Generar confiança** | Disseny premium dark, terminal animat, certificacions i metodologia SCRUM |
+| **Convertir** | CTAs estratègics, plans de preus comparatius i accés directe a la demo |
 
-La pàgina web de **Cybershield Solutions** és el portal corporatiu de l'empresa, dissenyat per transmetre confiança, professionalitat i capacitat tècnica als clients potencials. Serveix com a punt d'entrada principal per a la presentació dels serveis d'auditoria de seguretat i la demostració de l'eina **Diag Agent**.
+### Primera impressió
 
-### Objectius del Lloc Web
+El visitant arriba i veu:
 
-| Objectiu | Implementació |
-|----------|---------------|
-| **Presentació comercial** | Serveis, tarifes i formulari de contacte |
-| **Demostració de l'eina** | Carrusel interactiu amb 22 captures de l'app |
-| **Documentació tècnica** | 15 funcionalitats detallades amb especificacions |
-| **Confiança visual** | Disseny premium amb efectes glassmorphism i partícules |
-| **Conversió** | CTAs estratègics, plans de preus i demo en viu |
+1. **Títol gradient animat** — "Automatització d'auditories i plans de millora"
+2. **Terminal widget** — Simula comandes reals (`trivy`, `nmap`, `ssh-audit`) amb efecte typewriter
+3. **Dos botons d'acció** — "Prova el Diag Agent" i "Sol·licita una auditoria"
+4. **Logos de tecnologies** — Linux, Ubuntu, Docker, Python, Proxmox, Grafana
 
 ---
 
-## Stack Tecnològic
+## Capacitats del Sistema
 
-| Tecnologia | Versió | Ús | Detalls |
-|------------|--------|-----|---------|
-| **HTML5** | 5 | Estructura semàntica | `<section>`, `<article>`, `<nav>`, `<header>`, `<footer>` |
-| **CSS3** | 3 | Estils i animacions | Variables CSS, Glassmorphism, Gradients, Keyframes |
-| **JavaScript** | ES6+ | Interactivitat | Classes, Intersection Observer, Canvas API, Touch Events |
-| **Bootstrap** | 5.3.2 | Framework CSS | Grid system, components, utilities |
-| **Bootstrap Icons** | 1.11.3 | Iconografia | +1.900 icones vectorials SVG |
-| **Google Fonts** | — | Tipografia | Inter (text) · JetBrains Mono (codi) |
+La web presenta les 15 funcionalitats del Diag Agent agrupades per àrea de valor:
 
-!!! tip "Sense dependències externes de build"
-    El lloc web és 100% estàtic — no requereix Node.js, bundlers ni processos de compilació. Es serveix directament des de Nginx.
+###  Seguretat Preventiva
 
----
+| Mòdul | Eina | Què fa |
+|-------|------|--------|
+| **Escaneig de Vulnerabilitats** | Trivy | CVEs en rootfs i Docker, filtrat per severitat |
+| **Auditoria SSH** | SSH-Audit | Algoritmes KEX/MAC, classificació de seguretat |
+| **Gestió de Paquets** | apt/dpkg | Detecció de paquets desactualitzats |
+| **Hardening** | — | Recomanacions de reforç (SSH, TLS, permisos) |
 
-## Arquitectura dels Fitxers
+###  Detecció Activa
 
-```
-Website/
-├── index.html              # Pàgina principal ─────────── 1.708 línies
-├── custom.css              # Sistema de disseny ────────── 1.476 línies
-├── custom.js               # Motor d'interactivitat ───── 765 línies
-├── carousel.css            # Estils del carrusel ──────── 332 línies
-└── Assets/
-    ├── logo.png            # Logo Cybershield (navbar + footer)
-    ├── foto.jpg            # Foto professional del fundador
-    ├── shield.png          # Imatge decorativa (secció About)
-    ├── web.png             # Preview Open Graph (xarxes socials)
-    └── Fotos Web/
-        └── newfotos/       # 22 captures actualitzades de l'app
-            ├── screenshot_1.png
-            ├── screenshot_2.png
-            ├── ...
-            └── screenshot_22.png
-```
+| Mòdul | Eina | Què fa |
+|-------|------|--------|
+| **SOC Dashboard** | Scapy + Chart.js | Network IDS en temps real, Port Scan/Brute Force/DoS |
+| **Monitoratge de Serveis** | psutil | Processos sospitosos, whitelist configurable |
+| **Anàlisi de Logs** | syslog | auth.log, kern.log, patrons anòmals |
+| **Anàlisi de Xarxa** | Nmap | Ports oberts, versions, serveis perillosos |
 
-**Total línies de codi:** ~4.281 línies (HTML + CSS + JS)
+###  Intel·ligència
 
----
+| Mòdul | Eina | Què fa |
+|-------|------|--------|
+| **OSINT Recon** | TheHarvester | Emails, subdominis, IPs, Certificate Transparency |
+| **Shodan Threat Intel** | Shodan API | Exposició pública, CVEs, ISP/ASN/Geo |
+| **AI Security** | z.ai | Audit Manager, Agent Autònom (beta), Chat, Risk Score |
+| **Enum4linux** | enum4linux | SMB/NetBIOS, usuaris, shares |
 
-## Seccions de la Pàgina
+###  Desplegament i Integració
 
-### 1. Navegació (Navbar)
+| Mòdul | Què fa |
+|-------|--------|
+| **Pentest Agent** | Scanner web: SQLi, XSS, LFI + Nikto/SQLMap |
+| **Target OS Scan** | Multi-plataforma: Windows (AD/SMB), macOS, iOS |
+| **Docker USB** | 100% offline, Trivy DB pre-cached, plug & play |
+| **Integrations** | Nikto, SQLMap, Hydra, Telegram Bot |
 
-Barra de navegació fixa a la part superior amb efecte **glassmorphism** (`backdrop-filter: blur`):
+### Serveis Comercials
 
-| Element | Detalls |
-|---------|---------|
-| **Logo** | Imatge amb animació de flotació contínua (`float` keyframe) |
-| **Menú** | 9 enllaços: Serveis, App, Funcionalitats, Equip, Sobre, Tarifes, Contacte, FAQ, Notícies |
-| **CTA** | Botó "Comença ara" amb gradient neon que redirigeix a `#contacte` |
-| **Scroll effect** | Canvia opacitat i shadow en fer scroll (`scrolled` class) |
-| **Mobile** | Hamburger menu amb collapse de Bootstrap |
+Tres plans presentats en targetes amb comparativa:
 
-La barra de progrés de scroll (`#scrollProgress`) es mostra a la part superior i indica el percentatge de pàgina navegat.
+| Pla | Preu | Per a qui |
+|-----|------|-----------|
+| **Start** | €399/auditoria | Empresa que vol una primera avaluació |
+| **Pro** ⭐ | €699.99/mes | Fins 5 servidors, monitoratge continu |
+| **Enterprise** | A mida | Alta disponibilitat, SIEM, formació IR |
 
 ---
 
-### 2. Hero Section
+## Robustesa Tècnica
 
-La secció d'impacte inicial que els visitants veuen primer:
+### Superfície d'atac zero
 
-- **Títol**: "Automatització d'**auditories** i plans de **millora**" amb text gradient animat
-- **Subtítol**: Descripció del servei amb paraules clau destacades en `<span class="text-gradient">`
-- **Botons d'acció**:
-    - 🔵 "Prova el Diag Agent" → `#app`
-    - ⚪ "Sol·licita una auditoria" → `#contacte`
-- **Indicadors de metodologia**: SCRUM · Open-Source · Resultats mesurables
-- **Terminal Widget animat**: Simula comandes reals del Diag Agent amb efecte typewriter:
+La web és **100% estàtica** — HTML, CSS i JavaScript purs servits per Nginx. No hi ha backend, base de dades ni processos de build. Això significa:
 
-```bash
-$ diag-agent --scan --full
-$ trivy fs / --severity HIGH,CRITICAL
-$ nmap -sV -sC localhost
-$ ssh-audit 127.0.0.1
-$ diag-agent --report --pdf --sign
-$ curl /api/soc/metrics | jq .
-$ theHarvester -d target.com -b crtsh
-$ docker run -d -p 8080:8080 diag-agent
-$ python pentest.py --target https://example.com
-$ enum4linux -a 192.168.1.100
-```
+- ✅ Sense dependències de runtime (Node.js, PHP, etc.)
+- ✅ Sense vulnerabilitats de servidor d'aplicació
+- ✅ Cache agressiu amb `expires 7d` per a assets
+- ✅ Servida des de Nginx amb SSL (Let's Encrypt)
 
-- **Logos de tecnologies**: Linux, Ubuntu, Proxmox, Grafana, Docker, Python
+### Stack
 
----
+| Tecnologia | Versió | Ús |
+|------------|--------|-----|
+| HTML5 | 5 | Estructura semàntica (`section`, `nav`, `header`, `footer`) |
+| CSS3 | 3 | Glassmorphism, gradients, animacions, variables CSS |
+| JavaScript | ES6+ | Canvas API, Intersection Observer, Touch Events, Classes |
+| Bootstrap | 5.3.2 | Grid, components, navbar responsive |
 
-### 3. Serveis
+### API REST com a capacitat d'integració
 
-Quatre targetes amb efecte *glass* i tilt 3D al hover:
-
-| Icona | Servei | Descripció |
-|-------|--------|------------|
-| 🛡️ | **Auditoria de seguretat** | Anàlisi de vulnerabilitats, revisió de configuracions i mapeig d'exposició de serveis |
-| 🔧 | **Hardening & millora** | Reforç de SSH, TLS, serveis, permisos i actualitzacions controlades |
-| 📊 | **Monitoratge continu** | Diag Agent en mode servei 24/7 amb vigilància de processos, logs i paquets |
-| 🎓 | **Resposta i formació** | Tallers per equips tècnics i procediments d'incident response |
-
----
-
-### 4. App / Diag Agent
-
-Presentació completa de l'eina organitzada en dues columnes de funcionalitats:
-
-**Columna esquerra:**
-
-| Mòdul | Descripció |
-|-------|------------|
-| **Dashboard Executiu** | Avaluació d'integritat, KPIs en temps real i AI Advisor |
-| **SOC Dashboard** | Monitoratge en temps real amb Network IDS (Scapy) i alertes intel·ligents |
-| **Pentest Agent** | Scanner web amb detecció de SQLi, XSS, LFI + Nikto i SQLMap |
-| **OSINT Recon** | TheHarvester + Shodan + Certificate Transparency Logs |
-| **AI Security** | Auditoria intel·ligent amb z.ai — Chat, Audit i Agent Autònom (beta) |
-
-**Columna dreta:**
-
-| Mòdul | Descripció |
-|-------|------------|
-| **Target OS Scan** | Escaneig multi-plataforma (Windows, macOS, iOS, Linux) |
-| **Informes signats** | PDF/CSV amb signatura digital X.509 i segell visible |
-| **Telegram** | Enviament d'informes PDF directament al mòbil |
-| **API RESTful** | Més de 30 endpoints per a integració amb SIEM/SOC |
-| **Setup automatitzat** | Instal·lació en minuts amb systemd service |
-
-Inclou un **carrusel interactiu** amb 22 captures de pantalla de l'aplicació, amb autoplay, navegació per fletxes, indicadors i suport tàctil.
-
----
-
-### 5. Funcionalitats Detallades
-
-Quinze targetes tècniques amb icones i descripcions exhaustives de cada mòdul del Diag Agent:
-
-#### Mòduls Core
-
-| # | Mòdul | Eines | Característiques Clau |
-|---|-------|-------|----------------------|
-| 1 | **Escaneig de Vulnerabilitats** | Trivy | Rootfs, Docker/Podman, filtrat per severitat, base de dades CVE actualitzada |
-| 2 | **Anàlisi de Xarxa** | Nmap | Descobriment de hosts, detecció de versions, ports perillosos, límit 250k chars |
-| 3 | **Auditoria SSH** | SSH-Audit | Algoritmes KEX/MAC/Encryption, classificació de seguretat, fingerprints |
-| 4 | **Gestió de Paquets** | apt/dpkg | Llistat, actualitzables, versions, historial |
-| 5 | **Monitoratge de Serveis** | psutil | Processos sospitosos, whitelist, ús de recursos, serveis exposats |
-| 6 | **Anàlisi de Logs** | syslog | auth.log, kern.log, filtrat temporal, patrons anòmals |
-
-#### Mòduls Avançats
-
-| # | Mòdul | Eines | Característiques Clau |
-|---|-------|-------|----------------------|
-| 7 | **SOC Dashboard** | Scapy, Chart.js | Network IDS, Port Scan/Brute Force/DoS detection, Live Packet Feed, Top Talkers |
-| 8 | **Pentest Agent** | Crawler propi | SQLi (Error/Boolean/Time), XSS, LFI, Command Injection, CORS, Cookie Security |
-| 9 | **OSINT Recon** | TheHarvester | Emails, subdominis, IPs, CT Logs (crt.sh), Shadow Infrastructure, email masking |
-| 10 | **Shodan Threat Intel** | Shodan API | Vulnerability Search, ISP/ASN/Geo, serveis perillosos, historial de scans |
-| 11 | **Enum4linux** | enum4linux | SMB/NetBIOS, usuaris, grups, shares, política de contrasenyes |
-
-#### Mòduls Nous
-
-| # | Mòdul | Tecnologia | Característiques Clau |
-|---|-------|------------|----------------------|
-| 12 | **Docker Deployment** | Docker | USB portàtil, 100% offline, Trivy DB pre-cached, plug & play |
-| 13 | **AI Security** | z.ai API | Audit Manager, Autonomous Agent (beta), Chat, Risk Score 0-100 |
-| 14 | **Target OS Scan** | Nmap/SSH | Multi-plataforma: Windows (SMB/AD/WinRM), macOS (AFP/Bonjour), iOS |
-| 15 | **Integrations** | Nikto/SQLMap/Hydra | Scanner web, SQL Injection, força bruta, Telegram Bot |
-
----
-
-### 6. Sistema d'Informes
-
-Targeta destacada que presenta el sistema de generació d'informes professionals:
-
-- **Formats**: PDF (WeasyPrint) i CSV
-- **Signatura digital**: X.509 amb PyHanko i segell visible del logo Cybershield
-- **Seccions seleccionables**: L'usuari tria quins mòduls incloure a l'informe
-- **Enviament**: Via Telegram Bot directament al mòbil del client
-
----
-
-### 7. API REST
-
-Documentació interactiva de l'API amb exemples de codi:
+L'aplicació (no la web) exposa **+30 endpoints** per a integració amb SIEM/SOC:
 
 ```javascript
-// Exemple: Obtenir estat del sistema en temps real
+// Exemple: estat del sistema en temps real
 fetch('/api/status')
   .then(r => r.json())
-  .then(data => {
-    console.log('Vulnerabilitats:', data.vulns);
-    console.log('CPU:', data.cpu + '%');
-    console.log('Memòria:', data.memory + '%');
-  });
+  .then(data => console.log('CPU:', data.cpu + '%'));
 ```
 
-**Endpoints destacats:**
+!!! note "Documentació API"
+    Endpoints complets a la secció [API REST](../api.md).
 
-| Mètode | Endpoint | Funció |
-|--------|----------|--------|
-| `GET` | `/api/status` | Estat general del sistema |
-| `POST` | `/api/run_trivy_filtered` | Executa escaneig Trivy amb filtres |
-| `POST` | `/api/nmap_scan` | Llança escaneig Nmap |
-| `POST` | `/api/run_cmd` | Executa comandaments segurs (whitelist) |
-| `GET` | `/api/soc/metrics` | Mètriques del SOC Dashboard |
-| `POST` | `/api/soc/block-ip` | Bloqueig d'IPs amb iptables |
+### Informes Professionals
 
-!!! note "API completa"
-    La documentació completa dels +30 endpoints es troba a la secció [API REST](../api.md).
+- **PDF** amb signatura digital X.509 (PyHanko) i segell visible Cybershield
+- **CSV** per a importació a eines d'anàlisi
+- **Telegram Bot** per enviament directe al mòbil
 
----
+### SEO
 
-### 8. Equip
-
-Presentació del fundador:
-
-- **Nom**: Vitaliy Domin
-- **Rol**: Founder · Especialista en Ciberseguretat i Infraestructures IT
-- **Foto**: Professional amb efecte hover reveal
-- **Descripció**: Lema corporatiu i visió del projecte
+Títol únic, meta description, Open Graph, Twitter Cards, HTML5 semàntic, `loading="lazy"`, IDs únics.
 
 ---
 
-### 9. Sobre Cybershield
+## Annex Tècnic
 
-Secció informativa amb context del projecte intermodular:
+??? info "Arquitectura de fitxers"
 
-- Entorns Linux Ubuntu amb VLANs i LDAP
-- Informes accionables per a millora contínua
-- Imatge corporativa amb efecte parallax
+    ```
+    Website/
+    ├── index.html              ─── 1.708 línies
+    ├── custom.css              ─── 1.476 línies
+    ├── custom.js               ─── 765 línies
+    ├── carousel.css            ─── 332 línies
+    └── Assets/
+        ├── logo.png, foto.jpg, shield.png, web.png
+        └── Fotos Web/newfotos/  ─── 22 screenshots
+    ```
 
----
+    **Total:** ~4.281 línies de codi
 
-### 10. Tarifes
+??? info "Sistema de disseny (CSS)"
 
-Tres plans de servei en targetes amb spotlight hover effect:
+    **Paleta:**
 
-| Pla | Preu | Inclòs |
-|-----|------|--------|
-| **Start** | €399/auditoria | 1 servidor, Informe PDF/CSV, Recomanacions bàsiques |
-| **Pro** ⭐ | €699.99/mes | Fins 5 servidors, Diag Agent com a servei, Sessions mensuals, Suport 24/7 |
-| **Enterprise** | A mida | Alta disponibilitat, Integració SIEM, Procediments IR, Formació |
+    | Variable | Color | Ús |
+    |----------|-------|-----|
+    | `--bg` | `#070b1a` | Fons principal |
+    | `--panel` | `#0d1426` | Targetes |
+    | `--accent-neon` | `#00d4ff` | CTAs, highlights |
+    | `--accent-purple` | `#9c27ff` | Gradients, accents |
 
-Inclou taula comparativa expandible amb checkmarks per funcionalitat i pla.
+    **Efectes:** Glassmorphism (`backdrop-filter: blur`), partícules Canvas, 3D Tilt (`perspective`), glow multicapa, gradients animats.
 
----
+    **Responsivitat:** Desktop (>1200px), Tablet (768–1200px), Mòbil (<768px).
 
-### 11. Contacte
+??? info "Motor JavaScript (custom.js — 765 línies)"
 
-Formulari de contacte amb validació en temps real:
+    10 sistemes independents:
 
-| Camp | Tipus | Validació |
-|------|-------|-----------|
-| Nom | Text | Requerit |
-| Empresa | Text | Opcional |
-| Email | Email | Regex + feedback visual |
-| Telèfon | Tel | Opcional |
-| Missatge | Textarea | Requerit |
-| Privacitat | Checkbox | Requerit |
-
-**Informació de contacte:** Tortosa (Tarragona), email corporatiu, xarxes socials.
-
----
-
-### 12. FAQ
-
-Acordió amb preguntes freqüents implementat amb Bootstrap Collapse:
-
-- Què és el Diag Agent i com funciona?
-- Quins sistemes operatius són compatibles?
-- Com s'instal·la i configura?
-- Altres preguntes comunes dels clients
-
----
-
-### 13. Notícies
-
-Secció de notícies i actualitzacions del servei amb targetes de blog.
-
----
-
-### 14. Footer
-
-| Element | Contingut |
-|---------|-----------|
-| **Logo** | Logo Cybershield + descripció breu |
-| **Navegació** | Enllaços a totes les seccions |
-| **Social** | LinkedIn, GitHub, X (Twitter) |
-| **Legal** | Copyright © amb any dinàmic via JavaScript |
-
----
-
-## Sistema de Disseny
-
-### Paleta de Colors
-
-```css
-:root {
-  --bg: #070b1a;              /* Fons principal — blau molt fosc */
-  --panel: #0d1426;           /* Panells i targetes */
-  --text: #f8fbff;            /* Text principal — blanc suau */
-  --accent: #60a5fa;          /* Accent principal — blau clar */
-  --accent-neon: #00d4ff;     /* Neon cian — CTAs i highlights */
-  --accent-purple: #9c27ff;   /* Porpra — gradients i accents secundaris */
-}
-```
-
-### Estil Visual
-
-| Tècnica | Implementació | Efecte |
-|---------|---------------|--------|
-| **Glassmorphism** | `backdrop-filter: blur(20px)` + border translúcid | Targetes i navbar semitransparents |
-| **Gradients animats** | `linear-gradient` amb `@keyframes` | Text gradient i fons orgànics |
-| **Partícules** | Canvas API amb 80 partícules interconnectades | Fons dinàmic amb antigravity al cursor |
-| **Glow effects** | `box-shadow` amb múltiples capes rgba neon | Efecte halo en hover i focus |
-| **3D Tilt** | `perspective(1000px) rotateX/Y` al `mousemove` | Targetes amb profunditat al hover |
-
-### Tipografia
-
-| Ús | Font | Pes |
-|----|------|-----|
-| Text general | Inter | 400, 600, 800 |
-| Codi i terminal | JetBrains Mono | 400 |
-
-### Responsivitat
-
-Breakpoints implementats amb media queries:
-
-| Dispositiu | Rang | Adaptacions |
-|------------|------|-------------|
-| **Desktop** | >1200px | Layout complet, efectes 3D, partícules |
-| **Tablet** | 768px – 1200px | Grid reduït, tilt desactivat |
-| **Mòbil** | <768px | Stack vertical, menú hamburger, partícules reduïdes |
-
----
-
-## Motor d'Interactivitat
-
-El fitxer `custom.js` (765 línies) implementa 10 sistemes d'interactivitat independents:
-
-### Sistemes Visuals
-
-| Sistema | Línies | Descripció |
-|---------|--------|------------|
-| **Cursor personalitzat** | ~40 | Cercle exterior amb lag + punt central precís, efecte `hover` en elements interactius |
-| **Partícules antigravity** | ~110 | 80 partícules Canvas amb línies de connexió i repulsió del cursor |
-| **Reveal on scroll** | ~30 | Intersection Observer per a animacions d'entrada (`reveal`, `reveal-fly`) |
-| **Parallax** | ~10 | Efecte de profunditat a la secció Hero |
-
-### Sistemes d'Interacció
-
-| Sistema | Línies | Descripció |
-|---------|--------|------------|
-| **Terminal typewriter** | ~55 | Simulació de terminal amb 11 comandes, escriptura+esborrat automàtic |
-| **Carrusel d'screenshots** | ~120 | Classe `AppCarousel` amb autoplay, swipe, keyboard, indicadors |
-| **3D tilt cards** | ~20 | `perspective` + `rotateX/Y` amb reset suau al `mouseleave` |
-| **Magnetic buttons** | ~15 | Botons que segueixen el cursor amb `translate` |
-| **Spotlight cards** | ~15 | `radial-gradient` que segueix el mouse a les targetes de preu |
-| **Ripple effect** | ~25 | Animació d'ona expansiva al clic de botons i targetes |
-
-### Sistemes Funcionals
-
-| Sistema | Línies | Descripció |
-|---------|--------|------------|
-| **Scroll progress** | ~10 | Barra de progrés a la part superior |
-| **Navbar scroll** | ~10 | Canvi d'estil de la navbar en scroll |
-| **Back to top** | ~5 | Botó flotant que apareix a >600px |
-| **Formulari** | ~40 | Validació, loading state, toast de confirmació |
-| **Cookie consent** | ~60 | Banner RGPD amb opció essencial/completa, localStorage |
-| **Counter animation** | ~25 | Animació numèrica per a KPIs |
-
----
-
-## SEO i Metadades
-
-### Metadades Implementades
-
-```html
-<!-- SEO Bàsic -->
-<title>Cybershield Solutions — Protect · Detect · Secure</title>
-<meta name="description" content="Auditories de seguretat...">
-<meta name="keywords" content="cybersecurity, auditing, diag agent...">
-
-<!-- Open Graph (Facebook, LinkedIn) -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Cybershield Solutions">
-<meta property="og:description" content="...">
-<meta property="og:image" content="/Assets/web.png">
-<meta property="og:url" content="https://cshield.duckdns.org">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Cybershield Solutions">
-<meta name="twitter:image" content="/Assets/web.png">
-```
-
-### Bones Pràctiques
-
-- ✅ Un únic `<h1>` per pàgina
-- ✅ Jerarquia correcta de headings (h1 → h2 → h3)
-- ✅ HTML5 semàntic (`<section>`, `<nav>`, `<header>`, `<footer>`)
-- ✅ Atributs `alt` en totes les imatges
-- ✅ `loading="lazy"` en imatges del carrusel
-- ✅ IDs únics en tots els elements interactius
+    | Sistema | ~Línies | Funció |
+    |---------|---------|--------|
+    | Partícules antigravity | 110 | 80 partícules Canvas amb repulsió del cursor |
+    | Carrusel (AppCarousel) | 120 | Autoplay, swipe, keyboard, indicadors |
+    | Cookie consent RGPD | 60 | Banner amb localStorage |
+    | Terminal typewriter | 55 | 11 comandes amb escriptura/esborrat |
+    | Formulari | 40 | Validació, loading, toast |
+    | Cursor personalitzat | 40 | Cercle exterior + punt central |
+    | Reveal on scroll | 30 | Intersection Observer |
+    | Counter animation | 25 | Animació numèrica KPIs |
+    | Ripple effect | 25 | Ona expansiva al clic |
+    | 3D tilt + magnetic + spotlight | 50 | Efectes de profunditat i seguiment |
 
 ---
 
 ## Desplegament
 
-El lloc web i la demo de l'aplicació es serveixen mitjançant **Nginx** com a proxy revers amb SSL (Let's Encrypt):
+| Entorn | URL |
+|--------|-----|
+| **Web principal** | [cshield.duckdns.org](https://cshield.duckdns.org) |
+| **Demo Diag Agent** | [democshield.duckdns.org](https://democshield.duckdns.org) |
 
-| Entorn | URL | Descripció |
-|--------|-----|------------|
-| **Web principal** | [cshield.duckdns.org](https://cshield.duckdns.org) | Lloc web estàtic de màrqueting |
-| **Demo Diag Agent** | [democshield.duckdns.org](https://democshield.duckdns.org) | Aplicació en mode lectura (proxy) |
-
-!!! tip "Documentació completa"
-    La configuració detallada del proxy revers, SSL, mode demo i seguretat del servidor es troba a la secció [Proxy Revers](proxy.md).
-
----
-
-**Última actualització:** 18 de febrer de 2026 · **Versió:** 3.0
-
+!!! tip "Configuració del servidor"
+    Documentació completa del proxy revers, SSL i mode demo a [Proxy Revers](proxy.md).

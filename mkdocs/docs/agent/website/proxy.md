@@ -28,30 +28,12 @@ Aquest document descriu la configuració del proxy revers Nginx per a la platafo
 
 ### Components Principals
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                     INTERNET                                │
-└─────────────────────────────────────────────────────────────┘
-                            │
-                            │ HTTPS (443)
-                            ▼
-┌─────────────────────────────────────────────────────────────┐
-│              NGINX (Proxy Revers)                           │
-│  ┌──────────────────────────────────────────────────────┐  │
-│  │ • cshield.duckdns.org           (lloc principal)     │  │
-│  │ • democshield.duckdns.org      (demo app)            │  │
-│  │ • _ (default)                   (bloqueja desconeguts)│  │
-│  └──────────────────────────────────────────────────────┘  │
-└─────────────────────────────────────────────────────────────┘
-                            │
-            ┌───────────────┼───────────────┐
-            │               │               │
-            ▼               ▼               ▼
-    ┌───────────┐   ┌───────────┐   ┌───────────┐
-    │   Web     │   │   App     │   │   403     │
-    │  Estàtica │   │Diag Agent │   │  Custom   │
-    │(Màrqueting)│   │  (Demo)   │   │  Demo     │
-    └───────────┘   └───────────┘   └───────────┘
+```mermaid
+flowchart TD
+    Internet["🌐 Internet"] -->|HTTPS 443| Nginx["Nginx - Proxy Revers"]
+    Nginx -->|cshield.duckdns.org| Web["🖥️ Web Estàtica\n(Màrqueting)"]
+    Nginx -->|democshield.duckdns.org| App["⚙️ Diag Agent\n(Demo - Només lectura)"]
+    Nginx -->|Domini desconegut| Block["🚫 return 444\n(Connexió tancada)"]
 ```
 
 ### Dominis Actius
@@ -474,20 +456,12 @@ window.sendAIMessage = function() {
 
 ### Flux de Redirecció
 
-```
-Usuari fa clic en botó
-        │
-        ▼
-JavaScript intercepta clic
-        │
-        ▼
-Redirecció a /403demo.html
-        │
-        ▼
-Nginx serveix pàgina personalitzada
-        │
-        ▼
-Usuari veu explicació + "Book Full Version"
+```mermaid
+flowchart TD
+    A["👆 Usuari fa clic en botó"] --> B["⚡ JavaScript intercepta clic"]
+    B --> C["↗️ Redirecció a /403demo.html"]
+    C --> D["📄 Nginx serveix pàgina personalitzada"]
+    D --> E["✅ Usuari veu explicació + Book Full Version"]
 ```
 
 ---
@@ -591,18 +565,13 @@ limit_req zone=one burst=30 nodelay;
 
 ### Model de Seguretat Defense-in-Depth
 
-```
-1. Firewall / Rate Limiting (Nginx)
-   ↓
-2. SSL/TLS + Security Headers
-   ↓
-3. Method Restrictions (GET only)
-   ↓
-4. Endpoint Blocking (regex)
-   ↓
-5. Client-Side Controls (JS injection)
-   ↓
-6. App-Level Whitelist (--allow-from)
+```mermaid
+flowchart TD
+    L1["1. 🔥 Firewall / Rate Limiting"] --> L2["2. 🔒 SSL/TLS + Security Headers"]
+    L2 --> L3["3. 📋 Method Restrictions - GET only"]
+    L3 --> L4["4. 🎯 Endpoint Blocking - regex"]
+    L4 --> L5["5. 💻 Client-Side Controls - JS injection"]
+    L5 --> L6["6. 🏠 App-Level Whitelist - allow-from"]
 ```
 
 ---
