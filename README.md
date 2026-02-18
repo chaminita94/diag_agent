@@ -12,6 +12,8 @@ You can explore the full technical documentation, code architecture, and user ma
 
 👉 **[View Complete Documentation Here](https://chaminita94.github.io/diag_agent/)**
 
+🔴 **[Live Demo — Diag Agent](https://democshield.duckdns.org)** (read-only mode via Nginx reverse proxy)
+
 ---
 
 ## 🛠️ About the Project
@@ -28,6 +30,7 @@ You can explore the full technical documentation, code architecture, and user ma
 | **SOC Dashboard** | Live metrics, IP blocking, and alert analysis |
 | **Audit Reports** | Digitally signed professional PDFs and CSV exports |
 | **Telegram Integration** | Send PDF reports directly to your mobile |
+| **Reverse Proxy Demo** | Nginx with SSL, rate limiting, and read-only demo mode |
 
 ---
 
@@ -35,15 +38,30 @@ You can explore the full technical documentation, code architecture, and user ma
 
 | File | Lines | Description |
 |------|-------|-------------|
-| `diag_agent_single.py` | 14,789 | Main agent with web UI, SOC Dashboard and Unified Scanner |
+| `diag_agent_single.py` | 15,275 | Main agent with web UI, SOC Dashboard and Unified Scanner |
 | `pentest_agent.py` | 3,281 | Professional web pentesting engine |
-| `audit_manager.py` | 624 | AI audit with z.ai, zero-days, and CVEs |
-| `autonomous_agent.py` | 147 | Autonomous agent with safe command execution |
 | `os_scanner.py` | 672 | Multi-OS scanning (Windows, macOS, iOS, Linux) |
-| `setup_diag.sh` | 406 | Automated installation script |
+| `audit_manager.py` | 624 | AI audit with z.ai, zero-days, and CVEs |
 | `uninstall_diag.sh` | 432 | Complete uninstall script |
+| `setup_diag.sh` | 406 | Automated installation script |
+| `autonomous_agent.py` | 147 | Autonomous agent with safe command execution |
 
-**Total: ~20,000+ lines of code**
+| Website File | Lines | Description |
+|--------------|-------|-------------|
+| `index.html` | 1,708 | Corporate landing page |
+| `custom.css` | 1,476 | Design system with glassmorphism and particles |
+| `custom.js` | 765 | Interactivity engine (carousel, cursor, canvas) |
+| `carousel.css` | 332 | Screenshot carousel styles |
+
+
+| Deployment File | Lines | Description |
+|-----------------|-------|-------------|
+| `nginx.conf` | 89 | Main Nginx configuration |
+| `sites-available/cshield` | 76 | Main site config (static) |
+| `sites-available/democshield` | 78 | Demo app config (proxy) |
+| `403demo.html` | 226 | Custom 403 demo page |
+
+**Total: ~25,900+ lines of code & config**
 
 ---
 
@@ -54,6 +72,16 @@ Diag agent/     → Full agent source code, setup scripts, and modules
 mkdocs/         → Documentation source files (Markdown)
 Website/        → Corporate landing page assets
 ```
+
+---
+
+## 🌐 Live Deployment
+
+| Environment | URL | Description |
+|-------------|-----|-------------|
+| **Website** | [cshield.duckdns.org](https://cshield.duckdns.org) | Corporate landing page |
+| **Demo App** | [democshield.duckdns.org](https://democshield.duckdns.org) | Diag Agent in read-only mode |
+| **Documentation** | [chaminita94.github.io/diag_agent](https://chaminita94.github.io/diag_agent/) | MkDocs technical docs |
 
 ---
 
@@ -77,4 +105,4 @@ MIT License
 **Cybershield Solutions © 2026** — Professional Security Diagnostics
 
 **Author**: Vitaliy Domin  
-**Version**: 4.10.0 (February 2026)
+**Version**: 4.11.0 (February 2026)

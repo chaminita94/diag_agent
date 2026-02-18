@@ -89,7 +89,7 @@ firefox http://192.168.1.100:8080
 
 | Fitxer | Línies | Descripció |
 |--------|--------|------------|
-| `diag_agent_single.py` | 15.276 | Agent principal amb interfície web, SOC Dashboard i Unified Scanner |
+| `diag_agent_single.py` | 15.275 | Agent principal amb interfície web, SOC Dashboard i Unified Scanner |
 | `pentest_agent.py` | 3.281 | Motor de pentesting web professional (SQLi, XSS, LFI) |
 | `audit_manager.py` | 624 | Auditoria AI amb z.ai, zero-days i CVEs |
 | `autonomous_agent.py` | 147 | Agent autònom amb comandes segures |
