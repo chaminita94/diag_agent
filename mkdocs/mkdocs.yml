@@ -42,10 +42,11 @@ docs_dir: docs
 # Navigation
 nav:
   - Inici: index.md
-  - Introducció:
+  - El Projecte:
     - Context del Projecte: agent/context.md
     - Metodologia SCRUM: agent/scrum.md
     - Empresa Auditada: agent/empresa-auditada.md
+    - Conclusions: agent/conclusions/index.md
   - Anàlisi de Riscos:
     - Identificació d'Actius: agent/actius.md
     - Valoració del Risc: agent/valoracio.md
@@ -57,6 +58,7 @@ nav:
     - Pentest Agent: agent/pentest.md
     - OSINT Reconnaissance: agent/osint.md
     - Anàlisi Tècnica del Codi: agent/codi-tecnic.md
+    - Signatura Digital: agent/signatura/index.md
   - Integracions: agent/integracions.md
   - Hardening i Seguretat: agent/hardening.md
   - Website:
@@ -68,8 +70,7 @@ nav:
     - Instal·lació: agent/installacio.md
     - Desplegament USB: agent/desplegament-usb.md
     - Configuració: agent/configuracio.md
-  - Signatura Digital: agent/signatura/index.md
-  - Conclusions: agent/conclusions/index.md
+  - Servidors HA (Lab): agent/servidors-ha/index.md
 
 # Extensions
 markdown_extensions:
