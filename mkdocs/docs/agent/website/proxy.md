@@ -8,11 +8,11 @@
 
 ## Taula de Continguts
 
-1. [Introducció](#introducció)
+1. [Introducció](#introduccio)
 2. [Arquitectura del Sistema](#arquitectura-del-sistema)
-3. [Configuració de Nginx](#configuració-de-nginx)
+3. [Configuració de Nginx](#configuracio-de-nginx)
 4. [Seguretat Implementada](#seguretat-implementada)
-5. [Gestió del Mode Demo](#gestió-del-mode-demo)
+5. [Gestió del Mode Demo](#gestio-del-mode-demo)
 6. [Manteniment i Operacions](#manteniment-i-operacions)
 
 ---

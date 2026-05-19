@@ -1,0 +1,966 @@
+=== Host Summary ===
+
+Hostname,ProjecteAsix
+Platform,Linux 6.8.0-111-generic
+IPs,"127.0.0.1, 172.17.0.1, 192.168.1.72, fe80::be24:11ff:fe54:638a, localhost"
+Uptime,"up 2 weeks, 3 days, 2 hours, 26 minutes"
+CPU Cores,5
+Load (1/5/15),0.12/0.04/0.01
+Memory,752.3 MB / 3.3 GB (22.2%)
+Generated (UTC),2026-05-19T16:01:09
+
+=== Trivy - Vulnerabilities (HIGH/CRITICAL) ===
+
+Severity,Package,Installed,Fixed,CVE,Title
+HIGH,linux-headers-6.8.0-110,6.8.0-110.110,6.8.0-111.111,CVE-2026-23112,kernel: nvmet-tcp: add bounds checks in nvmet_tcp_build_pdu_iovec
+HIGH,linux-headers-6.8.0-110,6.8.0-110.110,6.8.0-111.111,CVE-2026-23231,kernel: kernel: Privilege escalation or denial of service via use-after-free in nf_tables_addchain()
+HIGH,linux-headers-6.8.0-110-generic,6.8.0-110.110,6.8.0-111.111,CVE-2026-23112,kernel: nvmet-tcp: add bounds checks in nvmet_tcp_build_pdu_iovec
+HIGH,linux-headers-6.8.0-110-generic,6.8.0-110.110,6.8.0-111.111,CVE-2026-23231,kernel: kernel: Privilege escalation or denial of service via use-after-free in nf_tables_addchain()
+HIGH,linux-modules-6.8.0-110-generic,6.8.0-110.110,6.8.0-111.111,CVE-2026-23112,kernel: nvmet-tcp: add bounds checks in nvmet_tcp_build_pdu_iovec
+HIGH,linux-modules-6.8.0-110-generic,6.8.0-110.110,6.8.0-111.111,CVE-2026-23231,kernel: kernel: Privilege escalation or denial of service via use-after-free in nf_tables_addchain()
+HIGH,linux-modules-extra-6.8.0-110-generic,6.8.0-110.110,6.8.0-111.111,CVE-2026-23112,kernel: nvmet-tcp: add bounds checks in nvmet_tcp_build_pdu_iovec
+HIGH,linux-modules-extra-6.8.0-110-generic,6.8.0-110.110,6.8.0-111.111,CVE-2026-23231,kernel: kernel: Privilege escalation or denial of service via use-after-free in nf_tables_addchain()
+HIGH,linux-tools-6.8.0-110,6.8.0-110.110,6.8.0-111.111,CVE-2026-23112,kernel: nvmet-tcp: add bounds checks in nvmet_tcp_build_pdu_iovec
+HIGH,linux-tools-6.8.0-110,6.8.0-110.110,6.8.0-111.111,CVE-2026-23231,kernel: kernel: Privilege escalation or denial of service via use-after-free in nf_tables_addchain()
+HIGH,linux-tools-6.8.0-110-generic,6.8.0-110.110,6.8.0-111.111,CVE-2026-23112,kernel: nvmet-tcp: add bounds checks in nvmet_tcp_build_pdu_iovec
+HIGH,linux-tools-6.8.0-110-generic,6.8.0-110.110,6.8.0-111.111,CVE-2026-23231,kernel: kernel: Privilege escalation or denial of service via use-after-free in nf_tables_addchain()
+HIGH,cross-spawn,7.0.3,"7.0.5, 6.0.6",CVE-2024-21538,cross-spawn: regular expression denial of service
+HIGH,glob,10.4.2,"11.1.0, 10.5.0",CVE-2025-64756,glob: glob: Command Injection Vulnerability via Malicious Filenames
+HIGH,minimatch,9.0.5,"10.2.1, 9.0.6, 8.0.5, 7.4.7, 6.2.1, 5.1.7, 4.2.4, 3.1.3",CVE-2026-26996,minimatch: minimatch: Denial of Service via specially crafted glob patterns
+HIGH,minimatch,9.0.5,"10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.3",CVE-2026-27903,minimatch: minimatch: Denial of Service due to unbounded recursive backtracking via crafted glob patterns
+HIGH,minimatch,9.0.5,"10.2.3, 9.0.7, 8.0.6, 7.4.8, 6.2.2, 5.1.8, 4.2.5, 3.1.4",CVE-2026-27904,minimatch: Minimatch: Denial of Service via catastrophic backtracking in glob expressions
+HIGH,tar,6.2.1,7.5.3,CVE-2026-23745,node-tar: tar: node-tar: Arbitrary file overwrite and symlink poisoning via unsanitized linkpaths in archives
+HIGH,tar,6.2.1,7.5.4,CVE-2026-23950,node-tar: tar: node-tar: Arbitrary file overwrite via Unicode path collision race condition
+HIGH,tar,6.2.1,7.5.7,CVE-2026-24842,node-tar: tar: node-tar: Arbitrary file creation via path traversal bypass in hardlink security check
+HIGH,tar,6.2.1,7.5.8,CVE-2026-26960,node-tar: node-tar: Arbitrary file read/write via malicious archive hardlink creation
+HIGH,tar,6.2.1,7.5.10,CVE-2026-29786,node-tar: hardlink path traversal via drive-relative linkpath
+HIGH,tar,6.2.1,7.5.11,CVE-2026-31802,tar: tar: File overwrite via drive-relative symlink traversal
+HIGH,Scrapy,2.14.1,-,CVE-2017-14158,Scrapy 1.4 allows remote attackers to cause a denial of service (memor ...
+HIGH,Scrapy,2.14.1,2.14.2,GHSA-cwxj-rr6w-m6w7,Scrapy: Arbitrary Module Import via Referrer-Policy Header in RefererMiddleware
+HIGH,cryptography,46.0.3,46.0.5,CVE-2026-26007,cryptography: cryptography Subgroup Attack Due to Missing Subgroup Validation for SECT Curves
+HIGH,cryptography,46.0.3,46.0.5,CVE-2026-26007,cryptography: cryptography Subgroup Attack Due to Missing Subgroup Validation for SECT Curves
+HIGH,lxml,6.0.2,6.1.0,CVE-2026-41066,lxml: python: lxml: Information disclosure via untrusted XML input leading to local file read
+HIGH,lxml,6.0.2,6.1.0,CVE-2026-41066,lxml: python: lxml: Information disclosure via untrusted XML input leading to local file read
+HIGH,pillow,11.3.0,12.1.1,CVE-2026-25990,pillow: Pillow: Out-of-bounds Write via Specially Crafted PSD Image
+HIGH,pillow,11.3.0,12.2.0,CVE-2026-40192,Pillow: Pillow: Denial of Service via decompression bomb in FITS image processing
+HIGH,pillow,11.3.0,12.2.0,CVE-2026-42311,Pillow is a Python imaging library. From version 10.3.0 to before vers ...
+HIGH,pillow,12.0.0,12.1.1,CVE-2026-25990,pillow: Pillow: Out-of-bounds Write via Specially Crafted PSD Image
+HIGH,pillow,12.0.0,12.2.0,CVE-2026-40192,Pillow: Pillow: Denial of Service via decompression bomb in FITS image processing
+HIGH,pillow,12.0.0,12.2.0,CVE-2026-42311,Pillow is a Python imaging library. From version 10.3.0 to before vers ...
+HIGH,protobuf,6.33.4,"6.33.5, 5.29.6",CVE-2026-0994,python: protobuf: Protobuf: Denial of Service due to recursion depth bypass
+HIGH,protobuf,6.33.4,"6.33.5, 5.29.6",CVE-2026-0994,python: protobuf: Protobuf: Denial of Service due to recursion depth bypass
+HIGH,pyOpenSSL,25.3.0,26.0.0,CVE-2026-27459,pyOpenSSL: DTLS cookie callback buffer overflow
+HIGH,pyasn1,0.6.1,0.6.2,CVE-2026-23490,pyasn1: pyasn1: Denial of Service due to memory exhaustion from malformed RELATIVE-OID
+HIGH,pyasn1,0.6.1,0.6.3,CVE-2026-30922,pyasn1: pyasn1 Vulnerable to Denial of Service via Unbounded Recursion
+HIGH,ujson,5.11.0,5.12.0,CVE-2026-32874,UltraJSON: UltraJSON: Denial of Service due to memory leak when parsing large integers
+HIGH,ujson,5.11.0,5.12.0,CVE-2026-32874,UltraJSON: UltraJSON: Denial of Service due to memory leak when parsing large integers
+HIGH,ujson,5.11.0,5.12.0,CVE-2026-32875,ultrajson: UltraJSON: Denial of Service via large indent parameter in JSON serialization
+HIGH,ujson,5.11.0,5.12.0,CVE-2026-32875,ultrajson: UltraJSON: Denial of Service via large indent parameter in JSON serialization
+HIGH,urllib3,2.6.1,2.6.3,CVE-2026-21441,urllib3: urllib3 vulnerable to decompression-bomb safeguard bypass when following HTTP redirects (streaming API)
+HIGH,urllib3,2.6.1,2.7.0,CVE-2026-44431,urllib3: Sensitive headers forwarded across origins in proxied low-level redirects
+HIGH,urllib3,2.6.1,2.7.0,CVE-2026-44432,urllib3: Decompression-bomb safeguards bypassed in parts of the streaming API
+HIGH,weasyprint,66.0,68.0,CVE-2025-68616,WeasyPrint: WeasyPrint Server-Side Request Forgery (SSRF)
+HIGH,weasyprint,66.0,68.0,CVE-2025-68616,WeasyPrint: WeasyPrint Server-Side Request Forgery (SSRF)
+HIGH,wheel,0.45.1,0.46.2,CVE-2026-24049,wheel: wheel: Privilege Escalation or Arbitrary Code Execution via malicious wheel file unpacking
+HIGH,stdlib,v1.25.7,"1.25.8, 1.26.1",CVE-2026-25679,net/url: Incorrect parsing of IPv6 host literals in net/url
+HIGH,stdlib,v1.25.7,"1.25.9, 1.26.2",CVE-2026-32280,crypto/x509: crypto/tls: golang: Go: Denial of Service vulnerability in certificate chain building
+HIGH,stdlib,v1.25.7,"1.25.9, 1.26.2",CVE-2026-32281,crypto/x509: golang: Go crypto/x509: Denial of Service via inefficient certificate chain validation
+HIGH,stdlib,v1.25.7,"1.25.9, 1.26.2",CVE-2026-32283,crypto/tls: golang: Go crypto/tls: Denial of Service via multiple TLS 1.3 key update messages
+HIGH,stdlib,v1.25.7,"1.25.10, 1.26.3",CVE-2026-33811,"When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ..."
+HIGH,stdlib,v1.25.7,"1.25.10, 1.26.3",CVE-2026-33814,"When processing HTTP/2 SETTINGS frames, transport will enter an infini ..."
+HIGH,stdlib,v1.25.7,"1.25.10, 1.26.3",CVE-2026-39820,"Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ..."
+HIGH,stdlib,v1.25.7,"1.25.10, 1.26.3",CVE-2026-39836,Panic in Dial and LookupPort when handling NUL byte on Windows in net
+HIGH,stdlib,v1.25.7,"1.25.10, 1.26.3",CVE-2026-42499,Pathological inputs could cause DoS through consumePhrase when parsing ...
+HIGH,stdlib,v1.24.13,"1.25.8, 1.26.1",CVE-2026-25679,net/url: Incorrect parsing of IPv6 host literals in net/url
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32280,crypto/x509: crypto/tls: golang: Go: Denial of Service vulnerability in certificate chain building
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32281,crypto/x509: golang: Go crypto/x509: Denial of Service via inefficient certificate chain validation
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32283,crypto/tls: golang: Go crypto/tls: Denial of Service via multiple TLS 1.3 key update messages
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33811,"When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33814,"When processing HTTP/2 SETTINGS frames, transport will enter an infini ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39820,"Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39836,Panic in Dial and LookupPort when handling NUL byte on Windows in net
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-42499,Pathological inputs could cause DoS through consumePhrase when parsing ...
+HIGH,stdlib,v1.24.13,"1.25.8, 1.26.1",CVE-2026-25679,net/url: Incorrect parsing of IPv6 host literals in net/url
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32280,crypto/x509: crypto/tls: golang: Go: Denial of Service vulnerability in certificate chain building
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32281,crypto/x509: golang: Go crypto/x509: Denial of Service via inefficient certificate chain validation
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32283,crypto/tls: golang: Go crypto/tls: Denial of Service via multiple TLS 1.3 key update messages
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33811,"When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33814,"When processing HTTP/2 SETTINGS frames, transport will enter an infini ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39820,"Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39836,Panic in Dial and LookupPort when handling NUL byte on Windows in net
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-42499,Pathological inputs could cause DoS through consumePhrase when parsing ...
+HIGH,stdlib,v1.24.13,"1.25.8, 1.26.1",CVE-2026-25679,net/url: Incorrect parsing of IPv6 host literals in net/url
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32280,crypto/x509: crypto/tls: golang: Go: Denial of Service vulnerability in certificate chain building
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32281,crypto/x509: golang: Go crypto/x509: Denial of Service via inefficient certificate chain validation
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32283,crypto/tls: golang: Go crypto/tls: Denial of Service via multiple TLS 1.3 key update messages
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33811,"When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33814,"When processing HTTP/2 SETTINGS frames, transport will enter an infini ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39820,"Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39836,Panic in Dial and LookupPort when handling NUL byte on Windows in net
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-42499,Pathological inputs could cause DoS through consumePhrase when parsing ...
+HIGH,stdlib,v1.24.13,"1.25.8, 1.26.1",CVE-2026-25679,net/url: Incorrect parsing of IPv6 host literals in net/url
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32280,crypto/x509: crypto/tls: golang: Go: Denial of Service vulnerability in certificate chain building
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32281,crypto/x509: golang: Go crypto/x509: Denial of Service via inefficient certificate chain validation
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32283,crypto/tls: golang: Go crypto/tls: Denial of Service via multiple TLS 1.3 key update messages
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33811,"When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33814,"When processing HTTP/2 SETTINGS frames, transport will enter an infini ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39820,"Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39836,Panic in Dial and LookupPort when handling NUL byte on Windows in net
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-42499,Pathological inputs could cause DoS through consumePhrase when parsing ...
+HIGH,stdlib,v1.24.13,"1.25.8, 1.26.1",CVE-2026-25679,net/url: Incorrect parsing of IPv6 host literals in net/url
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32280,crypto/x509: crypto/tls: golang: Go: Denial of Service vulnerability in certificate chain building
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32281,crypto/x509: golang: Go crypto/x509: Denial of Service via inefficient certificate chain validation
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32283,crypto/tls: golang: Go crypto/tls: Denial of Service via multiple TLS 1.3 key update messages
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33811,"When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33814,"When processing HTTP/2 SETTINGS frames, transport will enter an infini ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39820,"Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39836,Panic in Dial and LookupPort when handling NUL byte on Windows in net
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-42499,Pathological inputs could cause DoS through consumePhrase when parsing ...
+HIGH,stdlib,v1.24.13,"1.25.8, 1.26.1",CVE-2026-25679,net/url: Incorrect parsing of IPv6 host literals in net/url
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32280,crypto/x509: crypto/tls: golang: Go: Denial of Service vulnerability in certificate chain building
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32281,crypto/x509: golang: Go crypto/x509: Denial of Service via inefficient certificate chain validation
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32283,crypto/tls: golang: Go crypto/tls: Denial of Service via multiple TLS 1.3 key update messages
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33811,"When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33814,"When processing HTTP/2 SETTINGS frames, transport will enter an infini ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39820,"Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39836,Panic in Dial and LookupPort when handling NUL byte on Windows in net
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-42499,Pathological inputs could cause DoS through consumePhrase when parsing ...
+HIGH,stdlib,v1.24.13,"1.25.8, 1.26.1",CVE-2026-25679,net/url: Incorrect parsing of IPv6 host literals in net/url
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32280,crypto/x509: crypto/tls: golang: Go: Denial of Service vulnerability in certificate chain building
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32281,crypto/x509: golang: Go crypto/x509: Denial of Service via inefficient certificate chain validation
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32283,crypto/tls: golang: Go crypto/tls: Denial of Service via multiple TLS 1.3 key update messages
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33811,"When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33814,"When processing HTTP/2 SETTINGS frames, transport will enter an infini ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39820,"Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39836,Panic in Dial and LookupPort when handling NUL byte on Windows in net
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-42499,Pathological inputs could cause DoS through consumePhrase when parsing ...
+HIGH,stdlib,v1.24.13,"1.25.8, 1.26.1",CVE-2026-25679,net/url: Incorrect parsing of IPv6 host literals in net/url
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32280,crypto/x509: crypto/tls: golang: Go: Denial of Service vulnerability in certificate chain building
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32281,crypto/x509: golang: Go crypto/x509: Denial of Service via inefficient certificate chain validation
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32283,crypto/tls: golang: Go crypto/tls: Denial of Service via multiple TLS 1.3 key update messages
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33811,"When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33814,"When processing HTTP/2 SETTINGS frames, transport will enter an infini ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39820,"Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39836,Panic in Dial and LookupPort when handling NUL byte on Windows in net
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-42499,Pathological inputs could cause DoS through consumePhrase when parsing ...
+HIGH,stdlib,v1.24.13,"1.25.8, 1.26.1",CVE-2026-25679,net/url: Incorrect parsing of IPv6 host literals in net/url
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32280,crypto/x509: crypto/tls: golang: Go: Denial of Service vulnerability in certificate chain building
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32281,crypto/x509: golang: Go crypto/x509: Denial of Service via inefficient certificate chain validation
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32283,crypto/tls: golang: Go crypto/tls: Denial of Service via multiple TLS 1.3 key update messages
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33811,"When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33814,"When processing HTTP/2 SETTINGS frames, transport will enter an infini ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39820,"Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39836,Panic in Dial and LookupPort when handling NUL byte on Windows in net
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-42499,Pathological inputs could cause DoS through consumePhrase when parsing ...
+HIGH,stdlib,v1.24.13,"1.25.8, 1.26.1",CVE-2026-25679,net/url: Incorrect parsing of IPv6 host literals in net/url
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32280,crypto/x509: crypto/tls: golang: Go: Denial of Service vulnerability in certificate chain building
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32281,crypto/x509: golang: Go crypto/x509: Denial of Service via inefficient certificate chain validation
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32283,crypto/tls: golang: Go crypto/tls: Denial of Service via multiple TLS 1.3 key update messages
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33811,"When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33814,"When processing HTTP/2 SETTINGS frames, transport will enter an infini ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39820,"Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39836,Panic in Dial and LookupPort when handling NUL byte on Windows in net
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-42499,Pathological inputs could cause DoS through consumePhrase when parsing ...
+HIGH,stdlib,v1.24.13,"1.25.8, 1.26.1",CVE-2026-25679,net/url: Incorrect parsing of IPv6 host literals in net/url
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32280,crypto/x509: crypto/tls: golang: Go: Denial of Service vulnerability in certificate chain building
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32281,crypto/x509: golang: Go crypto/x509: Denial of Service via inefficient certificate chain validation
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32283,crypto/tls: golang: Go crypto/tls: Denial of Service via multiple TLS 1.3 key update messages
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33811,"When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33814,"When processing HTTP/2 SETTINGS frames, transport will enter an infini ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39820,"Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39836,Panic in Dial and LookupPort when handling NUL byte on Windows in net
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-42499,Pathological inputs could cause DoS through consumePhrase when parsing ...
+HIGH,stdlib,v1.24.13,"1.25.8, 1.26.1",CVE-2026-25679,net/url: Incorrect parsing of IPv6 host literals in net/url
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32280,crypto/x509: crypto/tls: golang: Go: Denial of Service vulnerability in certificate chain building
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32281,crypto/x509: golang: Go crypto/x509: Denial of Service via inefficient certificate chain validation
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32283,crypto/tls: golang: Go crypto/tls: Denial of Service via multiple TLS 1.3 key update messages
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33811,"When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33814,"When processing HTTP/2 SETTINGS frames, transport will enter an infini ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39820,"Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39836,Panic in Dial and LookupPort when handling NUL byte on Windows in net
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-42499,Pathological inputs could cause DoS through consumePhrase when parsing ...
+HIGH,stdlib,v1.24.13,"1.25.8, 1.26.1",CVE-2026-25679,net/url: Incorrect parsing of IPv6 host literals in net/url
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32280,crypto/x509: crypto/tls: golang: Go: Denial of Service vulnerability in certificate chain building
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32281,crypto/x509: golang: Go crypto/x509: Denial of Service via inefficient certificate chain validation
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32283,crypto/tls: golang: Go crypto/tls: Denial of Service via multiple TLS 1.3 key update messages
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33811,"When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33814,"When processing HTTP/2 SETTINGS frames, transport will enter an infini ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39820,"Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39836,Panic in Dial and LookupPort when handling NUL byte on Windows in net
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-42499,Pathological inputs could cause DoS through consumePhrase when parsing ...
+HIGH,stdlib,v1.24.13,"1.25.8, 1.26.1",CVE-2026-25679,net/url: Incorrect parsing of IPv6 host literals in net/url
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32280,crypto/x509: crypto/tls: golang: Go: Denial of Service vulnerability in certificate chain building
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32281,crypto/x509: golang: Go crypto/x509: Denial of Service via inefficient certificate chain validation
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32283,crypto/tls: golang: Go crypto/tls: Denial of Service via multiple TLS 1.3 key update messages
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33811,"When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33814,"When processing HTTP/2 SETTINGS frames, transport will enter an infini ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39820,"Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39836,Panic in Dial and LookupPort when handling NUL byte on Windows in net
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-42499,Pathological inputs could cause DoS through consumePhrase when parsing ...
+HIGH,stdlib,v1.24.13,"1.25.8, 1.26.1",CVE-2026-25679,net/url: Incorrect parsing of IPv6 host literals in net/url
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32280,crypto/x509: crypto/tls: golang: Go: Denial of Service vulnerability in certificate chain building
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32281,crypto/x509: golang: Go crypto/x509: Denial of Service via inefficient certificate chain validation
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32283,crypto/tls: golang: Go crypto/tls: Denial of Service via multiple TLS 1.3 key update messages
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33811,"When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33814,"When processing HTTP/2 SETTINGS frames, transport will enter an infini ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39820,"Well-crafted inputs reaching ParseAddress, ParseAddressList, and Parse ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-39836,Panic in Dial and LookupPort when handling NUL byte on Windows in net
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-42499,Pathological inputs could cause DoS through consumePhrase when parsing ...
+HIGH,stdlib,v1.24.13,"1.25.8, 1.26.1",CVE-2026-25679,net/url: Incorrect parsing of IPv6 host literals in net/url
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32280,crypto/x509: crypto/tls: golang: Go: Denial of Service vulnerability in certificate chain building
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32281,crypto/x509: golang: Go crypto/x509: Denial of Service via inefficient certificate chain validation
+HIGH,stdlib,v1.24.13,"1.25.9, 1.26.2",CVE-2026-32283,crypto/tls: golang: Go crypto/tls: Denial of Service via multiple TLS 1.3 key update messages
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33811,"When using LookupCNAME with the cgo DNS resolver, a very long CNAME re ..."
+HIGH,stdlib,v1.24.13,"1.25.10, 1.26.3",CVE-2026-33814,"When processing HTTP/2 SETTINGS frames, transport will enter an infini ..."
+Trivy finished in 0.0s
+
+=== SSH-Audit (127.0.0.1) ===
+
+SSH Banner,SSH-2.0-OpenSSH_9.6p1 Ubuntu-3ubuntu13.16
+SSH Software,OpenSSH 9.6p1
+Protocol Version,2.0
+
+KEX Algorithms - Security Status
+Secure,8
+Weak,1
+Dangerous,3
+
+Host Key Algorithms - Security Status
+Secure,3
+Weak,0
+Dangerous,1
+
+Encryption Ciphers - Security Status
+Secure,6
+Weak/Deprecated,0
+
+MAC Algorithms - Security Status
+Secure,3
+Weak,5
+Broken,2
+
+Critical Security Issues
+"❌ 3 dangerous Key Exchange algorithms detected: ecdh-sha2-nistp256, ecdh-sha2-nistp384, ecdh-sha2-nistp521"
+❌ 1 insecure Host Key algorithms found: ecdsa-sha2-nistp256
+"❌ 2 broken MAC algorithms (SHA-1/MD5): hmac-sha1-etm@openssh.com, hmac-sha1"
+
+Hardening Recommendations
+"Configure KexAlgorithms to use only: curve25519-sha256, diffie-hellman-group-exchange-sha256"
+"Configure HostKeyAlgorithms to prefer: ssh-ed25519, rsa-sha2-512, rsa-sha2-256"
+"Configure MACs to use: hmac-sha2-512-etm@openssh.com, hmac-sha2-256-etm@openssh.com"
+Disable SSH Protocol 1 completely (Protocol 2 only)
+"Regenerate SSH host keys with stronger algorithms (ed25519, RSA 4096-bit)"
+SSH-Audit finished in 0.37s
+
+=== enum4linux SMB/NetBIOS Enumeration (127.0.0.1) ===
+
+Summary
+Users Found,0
+Shares Found,3
+Groups Found,0
+
+Target Information
+netbios_name,PROJECTEASIX
+fqdn,projecteasix
+domain,WORKGROUP
+
+Shares
+Share Name,Type,Comment,Accessible
+IPC$,IPC,"IPC Service (ProjecteAsix server (Samba, Ubuntu))",False
+print$,Disk,Printer Drivers,True
+share,Disk,,False
+
+Password Policy
+Min Length,5
+Lockout Threshold,None
+
+enum4linux finished in 1.05s
+
+Waiting 3 seconds before running Nmap...
+
+=== Nmap scan (127.0.0.1) ===
+
+Scan Summary
+Hosts Up,1
+Hosts Down,0
+Total Open Ports,5
+
+Host: 127.0.0.1
+
+Port,Protocol,State,Service,Version,Security
+22,tcp,open,ssh,,Safe
+80,tcp,open,http,,Safe
+139,tcp,open,netbios-ssn,,Dangerous
+443,tcp,open,https,,Safe
+445,tcp,open,microsoft-ds,,Dangerous
+
+Critical Security Findings
+🚨 2 dangerous port(s) found open across network
+"  ❌ 127.0.0.1: 139/tcp (netbios-ssn), 445/tcp (microsoft-ds)"
+
+Security Recommendations
+Restrict SMB/NetBIOS to internal network only - disable on internet-facing interfaces
+Implement firewall rules to restrict unnecessary port exposure
+Regularly scan network for unauthorized services
+Use intrusion detection/prevention systems (IDS/IPS)
+Keep all services updated with latest security patches
+Nmap finished in 1.04s
+
+=== System logs (tail 300) ===
+
+Log line
+2026-05-19T02:55:01.793988+00:00 ProjecteAsix CRON[61375]: pam_unix(cron:session): session closed for user root
+2026-05-19T03:05:01.801703+00:00 ProjecteAsix CRON[61384]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T03:05:01.805235+00:00 ProjecteAsix CRON[61384]: pam_unix(cron:session): session closed for user root
+2026-05-19T03:10:01.811562+00:00 ProjecteAsix CRON[61389]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T03:10:01.814083+00:00 ProjecteAsix CRON[61389]: pam_unix(cron:session): session closed for user root
+2026-05-19T03:15:01.820232+00:00 ProjecteAsix CRON[61395]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T03:15:01.823728+00:00 ProjecteAsix CRON[61395]: pam_unix(cron:session): session closed for user root
+2026-05-19T03:17:01.828998+00:00 ProjecteAsix CRON[61400]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T03:17:01.832269+00:00 ProjecteAsix CRON[61400]: pam_unix(cron:session): session closed for user root
+2026-05-19T03:25:01.839341+00:00 ProjecteAsix CRON[61411]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T03:25:01.843017+00:00 ProjecteAsix CRON[61411]: pam_unix(cron:session): session closed for user root
+2026-05-19T03:35:01.850592+00:00 ProjecteAsix CRON[61455]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T03:35:01.854289+00:00 ProjecteAsix CRON[61455]: pam_unix(cron:session): session closed for user root
+2026-05-19T03:45:01.861999+00:00 ProjecteAsix CRON[61465]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T03:45:01.865721+00:00 ProjecteAsix CRON[61465]: pam_unix(cron:session): session closed for user root
+2026-05-19T03:55:01.873144+00:00 ProjecteAsix CRON[61483]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T03:55:01.876272+00:00 ProjecteAsix CRON[61483]: pam_unix(cron:session): session closed for user root
+2026-05-19T04:05:01.883404+00:00 ProjecteAsix CRON[61493]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T04:05:01.886701+00:00 ProjecteAsix CRON[61493]: pam_unix(cron:session): session closed for user root
+2026-05-19T04:15:01.894697+00:00 ProjecteAsix CRON[61502]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T04:15:01.898180+00:00 ProjecteAsix CRON[61502]: pam_unix(cron:session): session closed for user root
+2026-05-19T04:17:01.903496+00:00 ProjecteAsix CRON[61521]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T04:17:01.906848+00:00 ProjecteAsix CRON[61521]: pam_unix(cron:session): session closed for user root
+2026-05-19T04:25:01.913537+00:00 ProjecteAsix CRON[61535]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T04:25:01.917111+00:00 ProjecteAsix CRON[61535]: pam_unix(cron:session): session closed for user root
+2026-05-19T04:35:01.924367+00:00 ProjecteAsix CRON[61546]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T04:35:01.927697+00:00 ProjecteAsix CRON[61546]: pam_unix(cron:session): session closed for user root
+2026-05-19T04:45:01.935469+00:00 ProjecteAsix CRON[61555]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T04:45:01.939074+00:00 ProjecteAsix CRON[61555]: pam_unix(cron:session): session closed for user root
+2026-05-19T04:55:01.946513+00:00 ProjecteAsix CRON[61566]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T04:55:01.949925+00:00 ProjecteAsix CRON[61566]: pam_unix(cron:session): session closed for user root
+2026-05-19T05:05:01.956650+00:00 ProjecteAsix CRON[61575]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T05:05:01.959657+00:00 ProjecteAsix CRON[61575]: pam_unix(cron:session): session closed for user root
+2026-05-19T05:15:01.967591+00:00 ProjecteAsix CRON[61603]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T05:15:01.971207+00:00 ProjecteAsix CRON[61603]: pam_unix(cron:session): session closed for user root
+2026-05-19T05:17:01.976701+00:00 ProjecteAsix CRON[61608]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T05:17:01.980302+00:00 ProjecteAsix CRON[61608]: pam_unix(cron:session): session closed for user root
+2026-05-19T05:25:01.987914+00:00 ProjecteAsix CRON[61619]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T05:25:01.991929+00:00 ProjecteAsix CRON[61619]: pam_unix(cron:session): session closed for user root
+2026-05-19T05:35:01.998297+00:00 ProjecteAsix CRON[61660]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T05:35:02.001513+00:00 ProjecteAsix CRON[61660]: pam_unix(cron:session): session closed for user root
+2026-05-19T05:45:01.008877+00:00 ProjecteAsix CRON[61670]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T05:45:01.012411+00:00 ProjecteAsix CRON[61670]: pam_unix(cron:session): session closed for user root
+2026-05-19T05:55:01.020358+00:00 ProjecteAsix CRON[62221]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T05:55:01.024321+00:00 ProjecteAsix CRON[62221]: pam_unix(cron:session): session closed for user root
+2026-05-19T06:05:01.031842+00:00 ProjecteAsix CRON[62232]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T06:05:01.035864+00:00 ProjecteAsix CRON[62232]: pam_unix(cron:session): session closed for user root
+2026-05-19T06:15:01.043521+00:00 ProjecteAsix CRON[62375]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T06:15:01.047311+00:00 ProjecteAsix CRON[62375]: pam_unix(cron:session): session closed for user root
+2026-05-19T06:17:01.053151+00:00 ProjecteAsix CRON[62380]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T06:17:01.057297+00:00 ProjecteAsix CRON[62380]: pam_unix(cron:session): session closed for user root
+2026-05-19T06:25:01.065192+00:00 ProjecteAsix CRON[62391]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T06:25:01.067989+00:00 ProjecteAsix CRON[62392]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T06:25:01.069890+00:00 ProjecteAsix CRON[62392]: pam_unix(cron:session): session closed for user root
+2026-05-19T06:25:01.079755+00:00 ProjecteAsix CRON[62391]: pam_unix(cron:session): session closed for user root
+2026-05-19T06:35:01.087447+00:00 ProjecteAsix CRON[62413]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T06:35:01.091491+00:00 ProjecteAsix CRON[62413]: pam_unix(cron:session): session closed for user root
+2026-05-19T06:45:01.098262+00:00 ProjecteAsix CRON[62423]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T06:45:01.101354+00:00 ProjecteAsix CRON[62423]: pam_unix(cron:session): session closed for user root
+2026-05-19T06:55:01.108184+00:00 ProjecteAsix CRON[62435]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T06:55:01.111521+00:00 ProjecteAsix CRON[62435]: pam_unix(cron:session): session closed for user root
+2026-05-19T07:05:01.118941+00:00 ProjecteAsix CRON[62447]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T07:05:01.122229+00:00 ProjecteAsix CRON[62447]: pam_unix(cron:session): session closed for user root
+2026-05-19T07:15:01.129205+00:00 ProjecteAsix CRON[62457]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T07:15:01.132529+00:00 ProjecteAsix CRON[62457]: pam_unix(cron:session): session closed for user root
+2026-05-19T07:17:01.138878+00:00 ProjecteAsix CRON[62461]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T07:17:01.142540+00:00 ProjecteAsix CRON[62461]: pam_unix(cron:session): session closed for user root
+2026-05-19T07:25:01.149166+00:00 ProjecteAsix CRON[62484]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T07:25:01.153060+00:00 ProjecteAsix CRON[62484]: pam_unix(cron:session): session closed for user root
+2026-05-19T07:35:01.160698+00:00 ProjecteAsix CRON[62494]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T07:35:01.164433+00:00 ProjecteAsix CRON[62494]: pam_unix(cron:session): session closed for user root
+2026-05-19T07:45:01.172536+00:00 ProjecteAsix CRON[62518]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T07:45:01.176427+00:00 ProjecteAsix CRON[62518]: pam_unix(cron:session): session closed for user root
+2026-05-19T07:55:01.183502+00:00 ProjecteAsix CRON[62534]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T07:55:01.186840+00:00 ProjecteAsix CRON[62534]: pam_unix(cron:session): session closed for user root
+2026-05-19T08:05:01.193888+00:00 ProjecteAsix CRON[62544]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T08:05:01.196955+00:00 ProjecteAsix CRON[62544]: pam_unix(cron:session): session closed for user root
+2026-05-19T08:15:01.204501+00:00 ProjecteAsix CRON[62554]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T08:15:01.208284+00:00 ProjecteAsix CRON[62554]: pam_unix(cron:session): session closed for user root
+2026-05-19T08:17:01.212985+00:00 ProjecteAsix CRON[62558]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T08:17:01.215952+00:00 ProjecteAsix CRON[62558]: pam_unix(cron:session): session closed for user root
+2026-05-19T08:25:01.222490+00:00 ProjecteAsix CRON[62570]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T08:25:01.225768+00:00 ProjecteAsix CRON[62570]: pam_unix(cron:session): session closed for user root
+2026-05-19T08:35:01.232788+00:00 ProjecteAsix CRON[62599]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T08:35:01.236734+00:00 ProjecteAsix CRON[62599]: pam_unix(cron:session): session closed for user root
+2026-05-19T08:45:01.244522+00:00 ProjecteAsix CRON[62627]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T08:45:01.248261+00:00 ProjecteAsix CRON[62627]: pam_unix(cron:session): session closed for user root
+2026-05-19T08:55:01.256225+00:00 ProjecteAsix CRON[62638]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T08:55:01.260287+00:00 ProjecteAsix CRON[62638]: pam_unix(cron:session): session closed for user root
+2026-05-19T09:05:01.267938+00:00 ProjecteAsix CRON[62648]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T09:05:01.271445+00:00 ProjecteAsix CRON[62648]: pam_unix(cron:session): session closed for user root
+2026-05-19T09:15:01.278211+00:00 ProjecteAsix CRON[62659]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T09:15:01.281323+00:00 ProjecteAsix CRON[62659]: pam_unix(cron:session): session closed for user root
+2026-05-19T09:17:01.287030+00:00 ProjecteAsix CRON[62663]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T09:17:01.291184+00:00 ProjecteAsix CRON[62663]: pam_unix(cron:session): session closed for user root
+2026-05-19T09:25:01.298223+00:00 ProjecteAsix CRON[62674]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T09:25:01.301789+00:00 ProjecteAsix CRON[62674]: pam_unix(cron:session): session closed for user root
+2026-05-19T09:35:01.309146+00:00 ProjecteAsix CRON[62684]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T09:35:01.312710+00:00 ProjecteAsix CRON[62684]: pam_unix(cron:session): session closed for user root
+2026-05-19T09:45:01.319566+00:00 ProjecteAsix CRON[62693]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T09:45:01.323047+00:00 ProjecteAsix CRON[62693]: pam_unix(cron:session): session closed for user root
+2026-05-19T09:55:01.330715+00:00 ProjecteAsix CRON[62719]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T09:55:01.334630+00:00 ProjecteAsix CRON[62719]: pam_unix(cron:session): session closed for user root
+2026-05-19T10:05:01.342492+00:00 ProjecteAsix CRON[62749]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T10:05:01.346275+00:00 ProjecteAsix CRON[62749]: pam_unix(cron:session): session closed for user root
+2026-05-19T10:15:01.353417+00:00 ProjecteAsix CRON[62764]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T10:15:01.356979+00:00 ProjecteAsix CRON[62764]: pam_unix(cron:session): session closed for user root
+2026-05-19T10:17:01.361969+00:00 ProjecteAsix CRON[62768]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T10:17:01.364982+00:00 ProjecteAsix CRON[62768]: pam_unix(cron:session): session closed for user root
+2026-05-19T10:25:01.371469+00:00 ProjecteAsix CRON[62780]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T10:25:01.374816+00:00 ProjecteAsix CRON[62780]: pam_unix(cron:session): session closed for user root
+2026-05-19T10:35:01.381352+00:00 ProjecteAsix CRON[62791]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T10:35:01.384478+00:00 ProjecteAsix CRON[62791]: pam_unix(cron:session): session closed for user root
+2026-05-19T10:45:01.392308+00:00 ProjecteAsix CRON[62802]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T10:45:01.396043+00:00 ProjecteAsix CRON[62802]: pam_unix(cron:session): session closed for user root
+2026-05-19T10:55:01.403899+00:00 ProjecteAsix CRON[62814]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T10:55:01.407682+00:00 ProjecteAsix CRON[62814]: pam_unix(cron:session): session closed for user root
+2026-05-19T11:05:01.416071+00:00 ProjecteAsix CRON[62836]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T11:05:01.419650+00:00 ProjecteAsix CRON[62836]: pam_unix(cron:session): session closed for user root
+2026-05-19T11:15:01.427086+00:00 ProjecteAsix CRON[62847]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T11:15:01.430692+00:00 ProjecteAsix CRON[62847]: pam_unix(cron:session): session closed for user root
+2026-05-19T11:17:01.436695+00:00 ProjecteAsix CRON[62852]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T11:17:01.440230+00:00 ProjecteAsix CRON[62852]: pam_unix(cron:session): session closed for user root
+2026-05-19T11:25:01.446182+00:00 ProjecteAsix CRON[62879]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T11:25:01.449099+00:00 ProjecteAsix CRON[62879]: pam_unix(cron:session): session closed for user root
+2026-05-19T11:35:01.455857+00:00 ProjecteAsix CRON[62894]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T11:35:01.458754+00:00 ProjecteAsix CRON[62894]: pam_unix(cron:session): session closed for user root
+2026-05-19T11:45:01.464914+00:00 ProjecteAsix CRON[62905]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T11:45:01.467819+00:00 ProjecteAsix CRON[62905]: pam_unix(cron:session): session closed for user root
+2026-05-19T11:55:01.474885+00:00 ProjecteAsix CRON[62915]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T11:55:01.477941+00:00 ProjecteAsix CRON[62915]: pam_unix(cron:session): session closed for user root
+2026-05-19T12:00:01.483353+00:00 ProjecteAsix CRON[62919]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T12:00:01.485273+00:00 ProjecteAsix CRON[62919]: pam_unix(cron:session): session closed for user root
+2026-05-19T12:05:01.491633+00:00 ProjecteAsix CRON[62927]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T12:05:01.495175+00:00 ProjecteAsix CRON[62927]: pam_unix(cron:session): session closed for user root
+2026-05-19T12:15:01.501566+00:00 ProjecteAsix CRON[62938]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T12:15:01.504640+00:00 ProjecteAsix CRON[62938]: pam_unix(cron:session): session closed for user root
+2026-05-19T12:17:01.509494+00:00 ProjecteAsix CRON[62957]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T12:17:01.512750+00:00 ProjecteAsix CRON[62957]: pam_unix(cron:session): session closed for user root
+2026-05-19T12:25:01.519980+00:00 ProjecteAsix CRON[62971]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T12:25:01.523862+00:00 ProjecteAsix CRON[62971]: pam_unix(cron:session): session closed for user root
+2026-05-19T12:35:01.530410+00:00 ProjecteAsix CRON[62983]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T12:35:01.533590+00:00 ProjecteAsix CRON[62983]: pam_unix(cron:session): session closed for user root
+2026-05-19T12:45:01.540329+00:00 ProjecteAsix CRON[62994]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T12:45:01.543182+00:00 ProjecteAsix CRON[62994]: pam_unix(cron:session): session closed for user root
+2026-05-19T12:55:01.549651+00:00 ProjecteAsix CRON[63006]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T12:55:01.552820+00:00 ProjecteAsix CRON[63006]: pam_unix(cron:session): session closed for user root
+2026-05-19T13:05:01.559665+00:00 ProjecteAsix CRON[63016]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T13:05:01.562986+00:00 ProjecteAsix CRON[63016]: pam_unix(cron:session): session closed for user root
+2026-05-19T13:15:01.570883+00:00 ProjecteAsix CRON[63026]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T13:15:01.574234+00:00 ProjecteAsix CRON[63026]: pam_unix(cron:session): session closed for user root
+2026-05-19T13:17:01.579593+00:00 ProjecteAsix CRON[63030]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T13:17:01.582974+00:00 ProjecteAsix CRON[63030]: pam_unix(cron:session): session closed for user root
+2026-05-19T13:25:01.590372+00:00 ProjecteAsix CRON[63042]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T13:25:01.594187+00:00 ProjecteAsix CRON[63042]: pam_unix(cron:session): session closed for user root
+2026-05-19T13:35:01.601964+00:00 ProjecteAsix CRON[63051]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T13:35:01.605751+00:00 ProjecteAsix CRON[63051]: pam_unix(cron:session): session closed for user root
+2026-05-19T13:45:01.613287+00:00 ProjecteAsix CRON[63075]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T13:45:01.616992+00:00 ProjecteAsix CRON[63075]: pam_unix(cron:session): session closed for user root
+2026-05-19T13:55:01.625031+00:00 ProjecteAsix CRON[63095]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T13:55:01.628722+00:00 ProjecteAsix CRON[63095]: pam_unix(cron:session): session closed for user root
+2026-05-19T14:05:01.636126+00:00 ProjecteAsix CRON[63109]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T14:05:01.639846+00:00 ProjecteAsix CRON[63109]: pam_unix(cron:session): session closed for user root
+2026-05-19T14:15:01.647958+00:00 ProjecteAsix CRON[63120]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T14:15:01.651826+00:00 ProjecteAsix CRON[63120]: pam_unix(cron:session): session closed for user root
+2026-05-19T14:17:01.656703+00:00 ProjecteAsix CRON[63124]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T14:17:01.659808+00:00 ProjecteAsix CRON[63124]: pam_unix(cron:session): session closed for user root
+2026-05-19T14:25:01.667391+00:00 ProjecteAsix CRON[63148]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T14:25:01.671310+00:00 ProjecteAsix CRON[63148]: pam_unix(cron:session): session closed for user root
+2026-05-19T14:35:01.678732+00:00 ProjecteAsix CRON[63158]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T14:35:01.682428+00:00 ProjecteAsix CRON[63158]: pam_unix(cron:session): session closed for user root
+2026-05-19T14:45:01.689287+00:00 ProjecteAsix CRON[63189]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T14:45:01.692546+00:00 ProjecteAsix CRON[63189]: pam_unix(cron:session): session closed for user root
+2026-05-19T14:55:01.699248+00:00 ProjecteAsix CRON[63202]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T14:55:01.702360+00:00 ProjecteAsix CRON[63202]: pam_unix(cron:session): session closed for user root
+2026-05-19T15:05:01.709455+00:00 ProjecteAsix CRON[63212]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T15:05:01.712479+00:00 ProjecteAsix CRON[63212]: pam_unix(cron:session): session closed for user root
+2026-05-19T15:15:01.718858+00:00 ProjecteAsix CRON[63221]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T15:15:01.721908+00:00 ProjecteAsix CRON[63221]: pam_unix(cron:session): session closed for user root
+2026-05-19T15:17:01.726923+00:00 ProjecteAsix CRON[63240]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T15:17:01.729974+00:00 ProjecteAsix CRON[63240]: pam_unix(cron:session): session closed for user root
+2026-05-19T15:25:01.736306+00:00 ProjecteAsix CRON[63281]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T15:25:01.739579+00:00 ProjecteAsix CRON[63281]: pam_unix(cron:session): session closed for user root
+2026-05-19T15:35:01.746073+00:00 ProjecteAsix CRON[63292]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T15:35:01.749241+00:00 ProjecteAsix CRON[63292]: pam_unix(cron:session): session closed for user root
+2026-05-19T15:45:01.756978+00:00 ProjecteAsix CRON[63301]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T15:45:01.760675+00:00 ProjecteAsix CRON[63301]: pam_unix(cron:session): session closed for user root
+2026-05-19T15:53:46.947862+00:00 ProjecteAsix sshd[63383]: Invalid user vitaliy from 192.168.1.113 port 61024
+2026-05-19T15:53:47.545022+00:00 ProjecteAsix sshd[63383]: pam_unix(sshd:auth): check pass; user unknown
+2026-05-19T15:53:47.545157+00:00 ProjecteAsix sshd[63383]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.1.113 
+2026-05-19T15:53:49.202610+00:00 ProjecteAsix sshd[63383]: Failed password for invalid user vitaliy from 192.168.1.113 port 61024 ssh2
+2026-05-19T15:53:51.150882+00:00 ProjecteAsix sshd[63383]: pam_unix(sshd:auth): check pass; user unknown
+2026-05-19T15:53:53.323262+00:00 ProjecteAsix sshd[63386]: Invalid user vitaliy from 192.168.1.113 port 61025
+2026-05-19T15:53:53.359660+00:00 ProjecteAsix sshd[63383]: Failed password for invalid user vitaliy from 192.168.1.113 port 61024 ssh2
+2026-05-19T15:53:53.519118+00:00 ProjecteAsix sshd[63383]: fatal: userauth_finish: send failure packet: Connection reset by peer [preauth]
+2026-05-19T15:53:53.519319+00:00 ProjecteAsix sshd[63383]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.1.113 
+2026-05-19T15:53:53.597420+00:00 ProjecteAsix sshd[63386]: Connection reset by invalid user vitaliy 192.168.1.113 port 61025 [preauth]
+2026-05-19T15:53:54.601179+00:00 ProjecteAsix sshd[63388]: Invalid user vitaliy from 192.168.1.113 port 61026
+2026-05-19T15:53:55.331247+00:00 ProjecteAsix sshd[63388]: Connection reset by invalid user vitaliy 192.168.1.113 port 61026 [preauth]
+2026-05-19T15:53:57.010192+00:00 ProjecteAsix sshd[63390]: Invalid user vitaliy from 192.168.1.113 port 61027
+2026-05-19T15:53:57.839282+00:00 ProjecteAsix sshd[63390]: pam_unix(sshd:auth): check pass; user unknown
+2026-05-19T15:53:57.839376+00:00 ProjecteAsix sshd[63390]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.1.113 
+2026-05-19T15:53:58.821345+00:00 ProjecteAsix sshd[63392]: Invalid user vitaliy from 192.168.1.113 port 61028
+2026-05-19T15:53:59.535876+00:00 ProjecteAsix sshd[63392]: pam_unix(sshd:auth): check pass; user unknown
+2026-05-19T15:53:59.535965+00:00 ProjecteAsix sshd[63392]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.1.113 
+2026-05-19T15:54:00.204179+00:00 ProjecteAsix sshd[63390]: Failed password for invalid user vitaliy from 192.168.1.113 port 61027 ssh2
+2026-05-19T15:54:00.207865+00:00 ProjecteAsix sshd[63390]: fatal: userauth_finish: send failure packet: Connection reset by peer [preauth]
+2026-05-19T15:54:00.841970+00:00 ProjecteAsix sshd[63392]: Failed password for invalid user vitaliy from 192.168.1.113 port 61028 ssh2
+2026-05-19T15:54:01.905005+00:00 ProjecteAsix sshd[63392]: fatal: userauth_finish: send failure packet: Connection reset by peer [preauth]
+2026-05-19T15:54:16.613255+00:00 ProjecteAsix sshd[63405]: Connection closed by 127.0.0.1 port 37624
+2026-05-19T15:55:01.767552+00:00 ProjecteAsix CRON[63413]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-05-19T15:55:01.770818+00:00 ProjecteAsix CRON[63413]: pam_unix(cron:session): session closed for user root
+2026-05-19T15:55:02.691656+00:00 ProjecteAsix sshd[63418]: Connection closed by 127.0.0.1 port 38726 [preauth]
+2026-05-19T15:55:02.713100+00:00 ProjecteAsix sshd[63420]: Connection closed by 127.0.0.1 port 38736 [preauth]
+2026-05-19T15:55:02.732229+00:00 ProjecteAsix sshd[63422]: Connection closed by 127.0.0.1 port 38748 [preauth]
+2026-05-19T15:55:02.744129+00:00 ProjecteAsix sshd[63424]: ssh_dispatch_run_fatal: Connection from 127.0.0.1 port 38760: DH GEX group out of range [preauth]
+2026-05-19T15:55:02.756666+00:00 ProjecteAsix sshd[63426]: ssh_dispatch_run_fatal: Connection from 127.0.0.1 port 38768: DH GEX group out of range [preauth]
+2026-05-19T15:55:02.769260+00:00 ProjecteAsix sshd[63428]: ssh_dispatch_run_fatal: Connection from 127.0.0.1 port 38774: DH GEX group out of range [preauth]
+2026-05-19T15:55:02.782086+00:00 ProjecteAsix sshd[63430]: ssh_dispatch_run_fatal: Connection from 127.0.0.1 port 38786: DH GEX group out of range [preauth]
+2026-05-19T15:55:02.794702+00:00 ProjecteAsix sshd[63432]: ssh_dispatch_run_fatal: Connection from 127.0.0.1 port 38798: DH GEX group out of range [preauth]
+2026-05-19T15:55:02.847752+00:00 ProjecteAsix sshd[63434]: Connection closed by 127.0.0.1 port 38804 [preauth]
+2026-05-19T15:55:02.955059+00:00 ProjecteAsix sshd[63436]: Connection closed by 127.0.0.1 port 38818 [preauth]
+2026-05-19T15:55:23.820898+00:00 ProjecteAsix smbd: pam_unix(samba:session): session closed for user nobody
+2026-05-19T15:55:24.706528+00:00 ProjecteAsix smbd: message repeated 13 times: [ pam_unix(samba:session): session closed for user nobody]
+2026-05-19T15:57:30.932535+00:00 ProjecteAsix sudo:     root : PWD=/home/grup1/scripts ; USER=root ; COMMAND=/usr/sbin/iptables -L INPUT -n --line-numbers
+2026-05-19T15:57:30.932964+00:00 ProjecteAsix sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=0)
+2026-05-19T15:57:30.935164+00:00 ProjecteAsix sudo: pam_unix(sudo:session): session closed for user root
+2026-05-19T15:58:16.615229+00:00 ProjecteAsix sshd[63724]: Connection closed by 127.0.0.1 port 57820
+2026-05-19T15:58:33.697712+00:00 ProjecteAsix sshd[63742]: error: Protocol major versions differ: 2 vs. 1
+2026-05-19T15:58:33.697948+00:00 ProjecteAsix sshd[63742]: banner exchange: Connection from 127.0.0.1 port 40614: could not read protocol version
+2026-05-19T15:58:33.705213+00:00 ProjecteAsix sshd[63743]: error: Protocol major versions differ: 2 vs. 1
+2026-05-19T15:58:33.705374+00:00 ProjecteAsix sshd[63743]: banner exchange: Connection from 127.0.0.1 port 40620: could not read protocol version
+2026-05-19T15:58:33.734132+00:00 ProjecteAsix sshd[63744]: Unable to negotiate with 127.0.0.1 port 40624: no matching host key type found. Their offer: ssh-dss [preauth]
+2026-05-19T15:58:33.753203+00:00 ProjecteAsix sshd[63746]: Unable to negotiate with 127.0.0.1 port 34836: no matching host key type found. Their offer: ssh-rsa [preauth]
+2026-05-19T15:58:33.817056+00:00 ProjecteAsix sshd[63748]: Connection closed by 127.0.0.1 port 34842 [preauth]
+2026-05-19T15:58:33.830541+00:00 ProjecteAsix sshd[63750]: Unable to negotiate with 127.0.0.1 port 34848: no matching host key type found. Their offer: ecdsa-sha2-nistp384 [preauth]
+2026-05-19T15:58:33.850268+00:00 ProjecteAsix sshd[63752]: Unable to negotiate with 127.0.0.1 port 34858: no matching host key type found. Their offer: ecdsa-sha2-nistp521 [preauth]
+2026-05-19T15:58:33.875714+00:00 ProjecteAsix sshd[63754]: Connection closed by 127.0.0.1 port 34874 [preauth]
+2026-05-19T15:58:35.134107+00:00 ProjecteAsix sshd[63758]: Connection closed by 127.0.0.1 port 34888 [preauth]
+2026-05-19T15:58:35.155362+00:00 ProjecteAsix sshd[63760]: Connection closed by 127.0.0.1 port 34892 [preauth]
+2026-05-19T15:58:35.174283+00:00 ProjecteAsix sshd[63762]: Connection closed by 127.0.0.1 port 34908 [preauth]
+2026-05-19T15:58:35.186077+00:00 ProjecteAsix sshd[63764]: ssh_dispatch_run_fatal: Connection from 127.0.0.1 port 34916: DH GEX group out of range [preauth]
+2026-05-19T15:58:35.198487+00:00 ProjecteAsix sshd[63766]: ssh_dispatch_run_fatal: Connection from 127.0.0.1 port 34930: DH GEX group out of range [preauth]
+2026-05-19T15:58:35.210725+00:00 ProjecteAsix sshd[63768]: ssh_dispatch_run_fatal: Connection from 127.0.0.1 port 34942: DH GEX group out of range [preauth]
+2026-05-19T15:58:35.224569+00:00 ProjecteAsix sshd[63771]: ssh_dispatch_run_fatal: Connection from 127.0.0.1 port 34954: DH GEX group out of range [preauth]
+2026-05-19T15:58:35.236479+00:00 ProjecteAsix sshd[63773]: ssh_dispatch_run_fatal: Connection from 127.0.0.1 port 34956: DH GEX group out of range [preauth]
+2026-05-19T15:58:35.288056+00:00 ProjecteAsix sshd[63775]: Connection closed by 127.0.0.1 port 34960 [preauth]
+2026-05-19T15:58:35.398935+00:00 ProjecteAsix sshd[63777]: Connection closed by 127.0.0.1 port 34966 [preauth]
+2026-05-19T16:00:33.522070+00:00 ProjecteAsix sshd[63800]: Connection closed by 192.168.1.72 port 45234 [preauth]
+2026-05-19T16:00:33.543183+00:00 ProjecteAsix sshd[63802]: Connection closed by 192.168.1.72 port 45240 [preauth]
+2026-05-19T16:00:33.562391+00:00 ProjecteAsix sshd[63804]: Connection closed by 192.168.1.72 port 45242 [preauth]
+2026-05-19T16:00:33.574154+00:00 ProjecteAsix sshd[63806]: ssh_dispatch_run_fatal: Connection from 192.168.1.72 port 45258: DH GEX group out of range [preauth]
+2026-05-19T16:00:33.586266+00:00 ProjecteAsix sshd[63808]: ssh_dispatch_run_fatal: Connection from 192.168.1.72 port 45274: DH GEX group out of range [preauth]
+2026-05-19T16:00:33.598822+00:00 ProjecteAsix sshd[63810]: ssh_dispatch_run_fatal: Connection from 192.168.1.72 port 45284: DH GEX group out of range [preauth]
+2026-05-19T16:00:33.611241+00:00 ProjecteAsix sshd[63812]: ssh_dispatch_run_fatal: Connection from 192.168.1.72 port 45290: DH GEX group out of range [preauth]
+2026-05-19T16:00:33.623818+00:00 ProjecteAsix sshd[63814]: ssh_dispatch_run_fatal: Connection from 192.168.1.72 port 45298: DH GEX group out of range [preauth]
+2026-05-19T16:00:33.675059+00:00 ProjecteAsix sshd[63816]: Connection closed by 192.168.1.72 port 45314 [preauth]
+2026-05-19T16:00:33.782936+00:00 ProjecteAsix sshd[63818]: Connection closed by 192.168.1.72 port 45318 [preauth]
+2026-05-19T16:00:34.240973+00:00 ProjecteAsix smbd: pam_unix(samba:session): session closed for user nobody
+2026-05-19T16:00:35.065464+00:00 ProjecteAsix smbd: message repeated 13 times: [ pam_unix(samba:session): session closed for user nobody]
+2026-05-19T16:00:54.898109+00:00 ProjecteAsix sshd[63898]: Connection closed by 192.168.1.72 port 44248 [preauth]
+2026-05-19T16:00:54.919604+00:00 ProjecteAsix sshd[63900]: Connection closed by 192.168.1.72 port 44252 [preauth]
+2026-05-19T16:00:54.938721+00:00 ProjecteAsix sshd[63902]: Connection closed by 192.168.1.72 port 44256 [preauth]
+2026-05-19T16:00:54.950912+00:00 ProjecteAsix sshd[63904]: ssh_dispatch_run_fatal: Connection from 192.168.1.72 port 44268: DH GEX group out of range [preauth]
+2026-05-19T16:00:54.963710+00:00 ProjecteAsix sshd[63906]: ssh_dispatch_run_fatal: Connection from 192.168.1.72 port 44284: DH GEX group out of range [preauth]
+2026-05-19T16:00:54.976426+00:00 ProjecteAsix sshd[63908]: ssh_dispatch_run_fatal: Connection from 192.168.1.72 port 44292: DH GEX group out of range [preauth]
+2026-05-19T16:00:54.988957+00:00 ProjecteAsix sshd[63910]: ssh_dispatch_run_fatal: Connection from 192.168.1.72 port 44302: DH GEX group out of range [preauth]
+2026-05-19T16:00:55.001584+00:00 ProjecteAsix sshd[63912]: ssh_dispatch_run_fatal: Connection from 192.168.1.72 port 44310: DH GEX group out of range [preauth]
+2026-05-19T16:00:55.053214+00:00 ProjecteAsix sshd[63914]: Connection closed by 192.168.1.72 port 44324 [preauth]
+2026-05-19T16:00:55.162489+00:00 ProjecteAsix sshd[63916]: Connection closed by 192.168.1.72 port 44326 [preauth]
+2026-05-19T16:00:55.612073+00:00 ProjecteAsix smbd: pam_unix(samba:session): session closed for user nobody
+2026-05-19T16:00:56.175720+00:00 ProjecteAsix smbd: message repeated 13 times: [ pam_unix(samba:session): session closed for user nobody]
+2026-05-19T16:00:56.888343+00:00 ProjecteAsix sshd[63964]: Connection closed by 192.168.1.72 port 44332 [preauth]
+2026-05-19T16:00:56.909840+00:00 ProjecteAsix sshd[63966]: Connection closed by 192.168.1.72 port 44336 [preauth]
+2026-05-19T16:00:56.928881+00:00 ProjecteAsix sshd[63968]: Connection closed by 192.168.1.72 port 44340 [preauth]
+2026-05-19T16:00:56.940982+00:00 ProjecteAsix sshd[63970]: ssh_dispatch_run_fatal: Connection from 192.168.1.72 port 44352: DH GEX group out of range [preauth]
+2026-05-19T16:00:56.953219+00:00 ProjecteAsix sshd[63972]: ssh_dispatch_run_fatal: Connection from 192.168.1.72 port 44362: DH GEX group out of range [preauth]
+2026-05-19T16:00:56.965713+00:00 ProjecteAsix sshd[63974]: ssh_dispatch_run_fatal: Connection from 192.168.1.72 port 44364: DH GEX group out of range [preauth]
+2026-05-19T16:00:56.979213+00:00 ProjecteAsix sshd[63976]: ssh_dispatch_run_fatal: Connection from 192.168.1.72 port 44374: DH GEX group out of range [preauth]
+2026-05-19T16:00:56.991734+00:00 ProjecteAsix sshd[63978]: ssh_dispatch_run_fatal: Connection from 192.168.1.72 port 44376: DH GEX group out of range [preauth]
+2026-05-19T16:00:57.045516+00:00 ProjecteAsix sshd[63980]: Connection closed by 192.168.1.72 port 44378 [preauth]
+2026-05-19T16:00:57.160712+00:00 ProjecteAsix sshd[63982]: Connection closed by 192.168.1.72 port 44380 [preauth]
+2026-05-19T16:00:57.640130+00:00 ProjecteAsix smbd: pam_unix(samba:session): session closed for user nobody
+2026-05-19T16:00:57.828952+00:00 ProjecteAsix smbd: message repeated 4 times: [ pam_unix(samba:session): session closed for user nobody]
+2026-05-19T16:00:57.876179+00:00 ProjecteAsix smbd: pam_unix(samba:session): session closed for user nobody
+2026-05-19T16:00:58.222444+00:00 ProjecteAsix smbd: message repeated 8 times: [ pam_unix(samba:session): session closed for user nobody]
+2026-05-19T16:01:09.646915+00:00 ProjecteAsix sshd[64070]: Connection closed by 127.0.0.1 port 43262 [preauth]
+2026-05-19T16:01:09.667948+00:00 ProjecteAsix sshd[64072]: Connection closed by 127.0.0.1 port 43276 [preauth]
+2026-05-19T16:01:09.686872+00:00 ProjecteAsix sshd[64074]: Connection closed by 127.0.0.1 port 43284 [preauth]
+2026-05-19T16:01:09.698654+00:00 ProjecteAsix sshd[64076]: ssh_dispatch_run_fatal: Connection from 127.0.0.1 port 43298: DH GEX group out of range [preauth]
+2026-05-19T16:01:09.710944+00:00 ProjecteAsix sshd[64078]: ssh_dispatch_run_fatal: Connection from 127.0.0.1 port 43300: DH GEX group out of range [preauth]
+2026-05-19T16:01:09.723477+00:00 ProjecteAsix sshd[64080]: ssh_dispatch_run_fatal: Connection from 127.0.0.1 port 43310: DH GEX group out of range [preauth]
+2026-05-19T16:01:09.736162+00:00 ProjecteAsix sshd[64082]: ssh_dispatch_run_fatal: Connection from 127.0.0.1 port 43324: DH GEX group out of range [preauth]
+2026-05-19T16:01:09.748848+00:00 ProjecteAsix sshd[64084]: ssh_dispatch_run_fatal: Connection from 127.0.0.1 port 43326: DH GEX group out of range [preauth]
+2026-05-19T16:01:09.801383+00:00 ProjecteAsix sshd[64086]: Connection closed by 127.0.0.1 port 43328 [preauth]
+2026-05-19T16:01:09.908847+00:00 ProjecteAsix sshd[64088]: Connection closed by 127.0.0.1 port 43340 [preauth]
+2026-05-19T16:01:10.365089+00:00 ProjecteAsix smbd: pam_unix(samba:session): session closed for user nobody
+2026-05-19T16:01:10.798004+00:00 ProjecteAsix smbd: message repeated 9 times: [ pam_unix(samba:session): session closed for user nobody]
+2026-05-19T16:01:10.839589+00:00 ProjecteAsix smbd: pam_unix(samba:session): session closed for user nobody
+2026-05-19T16:01:10.942023+00:00 ProjecteAsix smbd: message repeated 3 times: [ pam_unix(samba:session): session closed for user nobody]
+
+=== SSH failed attempts summary + raw lines ===
+
+SSH line
+2026-05-19T15:53:46.947862+00:00 ProjecteAsix sshd[63383]: Invalid user vitaliy from 192.168.1.113 port 61024
+2026-05-19T15:53:47.545157+00:00 ProjecteAsix sshd[63383]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.1.113 
+2026-05-19T15:53:49.202610+00:00 ProjecteAsix sshd[63383]: Failed password for invalid user vitaliy from 192.168.1.113 port 61024 ssh2
+2026-05-19T15:53:53.323262+00:00 ProjecteAsix sshd[63386]: Invalid user vitaliy from 192.168.1.113 port 61025
+2026-05-19T15:53:53.359660+00:00 ProjecteAsix sshd[63383]: Failed password for invalid user vitaliy from 192.168.1.113 port 61024 ssh2
+2026-05-19T15:53:53.519319+00:00 ProjecteAsix sshd[63383]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.1.113 
+2026-05-19T15:53:53.597420+00:00 ProjecteAsix sshd[63386]: Connection reset by invalid user vitaliy 192.168.1.113 port 61025 [preauth]
+2026-05-19T15:53:54.601179+00:00 ProjecteAsix sshd[63388]: Invalid user vitaliy from 192.168.1.113 port 61026
+2026-05-19T15:53:55.331247+00:00 ProjecteAsix sshd[63388]: Connection reset by invalid user vitaliy 192.168.1.113 port 61026 [preauth]
+2026-05-19T15:53:57.010192+00:00 ProjecteAsix sshd[63390]: Invalid user vitaliy from 192.168.1.113 port 61027
+2026-05-19T15:53:57.839376+00:00 ProjecteAsix sshd[63390]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.1.113 
+2026-05-19T15:53:58.821345+00:00 ProjecteAsix sshd[63392]: Invalid user vitaliy from 192.168.1.113 port 61028
+2026-05-19T15:53:59.535965+00:00 ProjecteAsix sshd[63392]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.1.113 
+2026-05-19T15:54:00.204179+00:00 ProjecteAsix sshd[63390]: Failed password for invalid user vitaliy from 192.168.1.113 port 61027 ssh2
+2026-05-19T15:54:00.841970+00:00 ProjecteAsix sshd[63392]: Failed password for invalid user vitaliy from 192.168.1.113 port 61028 ssh2
+
+"=== Top processes (pid, name, user, cpu%, mem%, cmd) ==="
+
+PID,Name,User,CPU%,Mem%,Cmdline
+1,systemd,root,0.0,0.4,/sbin/init
+2,kthreadd,root,0.0,0,
+3,pool_workqueue_release,root,0.0,0,
+4,kworker/R-rcu_g,root,0.0,0,
+5,kworker/R-rcu_p,root,0.0,0,
+6,kworker/R-slub_,root,0.0,0,
+7,kworker/R-netns,root,0.0,0,
+10,kworker/0:0H-events_highpri,root,0.0,0,
+12,kworker/R-mm_pe,root,0.0,0,
+13,rcu_tasks_kthread,root,0.0,0,
+14,rcu_tasks_rude_kthread,root,0.0,0,
+15,rcu_tasks_trace_kthread,root,0.0,0,
+16,ksoftirqd/0,root,0.0,0,
+17,rcu_preempt,root,0.0,0,
+18,migration/0,root,0.0,0,
+19,idle_inject/0,root,0.0,0,
+20,cpuhp/0,root,0.0,0,
+21,cpuhp/1,root,0.0,0,
+22,idle_inject/1,root,0.0,0,
+23,migration/1,root,0.0,0,
+24,ksoftirqd/1,root,0.0,0,
+26,kworker/1:0H-events_highpri,root,0.0,0,
+27,cpuhp/2,root,0.0,0,
+28,idle_inject/2,root,0.0,0,
+29,migration/2,root,0.0,0,
+30,ksoftirqd/2,root,0.0,0,
+32,kworker/2:0H-kblockd,root,0.0,0,
+33,cpuhp/3,root,0.0,0,
+34,idle_inject/3,root,0.0,0,
+35,migration/3,root,0.0,0,
+36,ksoftirqd/3,root,0.0,0,
+38,kworker/3:0H-events_highpri,root,0.0,0,
+39,cpuhp/4,root,0.0,0,
+40,idle_inject/4,root,0.0,0,
+41,migration/4,root,0.0,0,
+42,ksoftirqd/4,root,0.0,0,
+44,kworker/4:0H-kblockd,root,0.0,0,
+45,kdevtmpfs,root,0.0,0,
+46,kworker/R-inet_,root,0.0,0,
+47,kauditd,root,0.0,0,
+48,khungtaskd,root,0.0,0,
+50,oom_reaper,root,0.0,0,
+51,kworker/R-write,root,0.0,0,
+52,kcompactd0,root,0.0,0,
+53,ksmd,root,0.0,0,
+54,khugepaged,root,0.0,0,
+55,kworker/R-kinte,root,0.0,0,
+56,kworker/R-kbloc,root,0.0,0,
+57,kworker/R-blkcg,root,0.0,0,
+58,irq/9-acpi,root,0.0,0,
+60,kworker/R-tpm_d,root,0.0,0,
+61,kworker/R-ata_s,root,0.0,0,
+62,kworker/R-md,root,0.0,0,
+63,kworker/R-md_bi,root,0.0,0,
+64,kworker/R-edac-,root,0.0,0,
+65,kworker/R-devfr,root,0.0,0,
+66,watchdogd,root,0.0,0,
+67,kworker/R-quota,root,0.0,0,
+68,kworker/0:1H-kblockd,root,0.0,0,
+69,kswapd0,root,0.0,0,
+71,ecryptfs-kthread,root,0.0,0,
+72,kworker/R-kthro,root,0.0,0,
+73,kworker/R-acpi_,root,0.0,0,
+74,scsi_eh_0,root,0.0,0,
+75,kworker/R-scsi_,root,0.0,0,
+76,scsi_eh_1,root,0.0,0,
+77,kworker/R-scsi_,root,0.0,0,
+78,scsi_eh_2,root,0.0,0,
+79,kworker/R-scsi_,root,0.0,0,
+84,kworker/R-mld,root,0.0,0,
+85,kworker/1:1H-kblockd,root,0.0,0,
+86,kworker/R-ipv6_,root,0.0,0,
+93,kworker/R-kstrp,root,0.0,0,
+97,kworker/u11:0,root,0.0,0,
+102,kworker/R-crypt,root,0.0,0,
+104,kworker/2:1H,root,0.0,0,
+105,kworker/4:1H-kblockd,root,0.0,0,
+115,kworker/R-charg,root,0.0,0,
+154,kworker/3:1H-kblockd,root,0.0,0,
+191,kworker/R-ttm,root,0.0,0,
+204,kworker/R-kdmfl,root,0.0,0,
+230,kworker/R-raid5,root,0.0,0,
+269,jbd2/dm-0-8,root,0.0,0,
+270,kworker/R-ext4-,root,0.0,0,
+338,systemd-journald,root,0.0,1.24,/usr/lib/systemd/systemd-journald
+364,kworker/R-kmpat,root,0.0,0,
+365,kworker/R-kmpat,root,0.0,0,
+390,multipathd,root,0.0,0.79,/sbin/multipathd -d -s
+406,systemd-udevd,root,0.0,0.2,/usr/lib/systemd/systemd-udevd
+419,psimon,root,0.0,0,
+534,jbd2/sda2-8,root,0.0,0,
+535,kworker/R-ext4-,root,0.0,0,
+588,systemd-networkd,systemd-network,0.0,0.28,/usr/lib/systemd/systemd-networkd
+614,systemd-resolved,systemd-resolve,0.0,0.38,/usr/lib/systemd/systemd-resolved
+628,systemd-timesyncd,systemd-timesync,0.0,0.23,/usr/lib/systemd/systemd-timesyncd
+697,kworker/R-cfg80,root,0.0,0,
+714,dbus-daemon,messagebus,0.0,0.17,@dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+720,polkitd,polkitd,0.0,0.23,/usr/lib/polkit-1/polkitd --no-debug
+726,systemd-logind,root,0.0,0.26,/usr/lib/systemd/systemd-logind
+727,udisksd,root,0.0,0.39,/usr/libexec/udisks2/udisksd
+738,unattended-upgr,root,0.0,0.64,/usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+740,rsyslogd,syslog,0.0,0.19,/usr/sbin/rsyslogd -n -iNONE
+752,containerd,root,0.1,1.38,/usr/bin/containerd
+763,ModemManager,root,0.0,0.37,/usr/sbin/ModemManager
+862,dockerd,root,0.0,2.45,/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+866,cron,root,0.0,0.09,/usr/sbin/cron -f -P
+878,agetty,root,0.0,0.06,/sbin/agetty -o -p -- \u --noclear - linux
+978,nmbd,root,0.0,0.53,/usr/sbin/nmbd --foreground --no-process-group
+1220,sshd,root,0.0,0.24,sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+1540,upowerd,root,0.0,0.26,/usr/libexec/upowerd
+2827,kworker/R-tls-s,root,0.0,0,
+4800,kworker/R-ib-co,root,0.0,0,
+4801,kworker/R-ib-co,root,0.0,0,
+4802,kworker/R-ib_mc,root,0.0,0,
+4803,kworker/R-ib_nl,root,0.0,0,
+29220,python3,root,1.7,8.95,/home/grup1/scripts/venv/bin/python3 /home/grup1/scripts/diag_agent_single.py --host 192.168.1.72 --port 8080 --allow-from 192.168.1.0/24
+41913,smbd,root,0.1,0.76,/usr/sbin/smbd --foreground --no-process-group
+41917,smbd-notifyd,root,0.0,0.2,smbd: notifyd .                               
+41918,smbd-cleanupd,root,0.0,0.19,smbd: cleanupd                                
+48969,psimon,root,0.0,0,
+49036,nginx,root,0.0,0.26,nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+49038,nginx,www-data,0.0,0.29,nginx: worker process                           
+49039,nginx,www-data,0.0,0.28,nginx: worker process                           
+49040,nginx,www-data,0.0,0.29,nginx: worker process                           
+49041,nginx,www-data,0.0,0.28,nginx: worker process                           
+49042,nginx,www-data,0.0,0.29,nginx: worker process                           
+63013,kworker/3:2-events,root,0.0,0,
+63033,kworker/u10:1-writeback,root,0.0,0,
+63038,kworker/1:1-events,root,0.0,0,
+63117,kworker/4:3-events,root,0.0,0,
+63155,kworker/4:1-events,root,0.0,0,
+63181,kworker/1:3-cgroup_free,root,0.0,0,
+63197,kworker/0:2-kdmflush/252:0,root,0.0,0,
+63219,kworker/3:0-cgroup_release,root,0.0,0,
+63230,fwupd,root,0.0,1.23,/usr/libexec/fwupd/fwupd
+63274,kworker/0:3-events,root,0.0,0,
+63289,kworker/u10:2-events_power_efficient,root,0.0,0,
+63299,kworker/2:0-events,root,0.0,0,
+63308,kworker/2:2-cgroup_release,root,0.0,0,
+63309,kworker/u10:3-events_power_efficient,root,0.0,0,
+63576,kworker/u10:0-events_power_efficient,root,0.0,0,
+63577,kworker/u10:4,root,0.0,0,
+63786,kworker/3:1-mm_percpu_wq,root,0.0,0,
+63838,samba-dcerpcd,root,0.0,0.36,/usr/libexec/samba/samba-dcerpcd --libexec-rpcds --ready-signal-fd=29 --np-helper --debuglevel=0
+63847,rpcd_lsad,root,0.0,0.69,/usr/libexec/samba/rpcd_lsad --configfile=/etc/samba/smb.conf --worker-group=5 --worker-index=0 --debuglevel=0
+63861,rpcd_classic,root,0.0,0.77,/usr/libexec/samba/rpcd_classic --configfile=/etc/samba/smb.conf --worker-group=2 --worker-index=0 --debuglevel=0
+63863,rpcd_winreg,root,0.0,0.66,/usr/libexec/samba/rpcd_winreg --configfile=/etc/samba/smb.conf --worker-group=3 --worker-index=5 --debuglevel=0
+64142,kworker/2:1,root,0.0,0,
+
+=== Services (systemctl list-units --type=service) ===
+
+Unit,Load,Active,Sub,Description
+apparmor.service,loaded,active,exited,Load AppArmor profiles
+apport-autoreport.service,loaded,inactive,dead,Process error reports when automatic reporting is enabled
+apport.service,loaded,active,exited,automatic crash report generation
+apt-daily-upgrade.service,loaded,inactive,dead,Daily apt upgrade and clean activities
+apt-daily.service,loaded,inactive,dead,Daily apt download activities
+blk-availability.service,loaded,active,exited,Availability of block devices
+certbot.service,loaded,inactive,dead,Certbot
+cloud-init-local.service,loaded,inactive,dead,Cloud-init: Local Stage (pre-network)
+console-setup.service,loaded,active,exited,Set console font and keymap
+containerd.service,loaded,active,running,containerd container runtime
+cron.service,loaded,active,running,Regular background program processing daemon
+dbus.service,loaded,active,running,D-Bus System Message Bus
+diag-agent.service,loaded,active,running,Diag Agent - Cybershield Security Diagnostics Platform
+dm-event.service,loaded,inactive,dead,Device-mapper event daemon
+dmesg.service,loaded,inactive,dead,Save initial kernel messages after boot
+docker.service,loaded,active,running,Docker Application Container Engine
+dpkg-db-backup.service,loaded,inactive,dead,Daily dpkg database backup service
+e2scrub_all.service,loaded,inactive,dead,Online ext4 Metadata Check for All Filesystems
+e2scrub_reap.service,loaded,inactive,dead,Remove Stale Online ext4 Metadata Check Snapshots
+emergency.service,loaded,inactive,dead,Emergency Shell
+finalrd.service,loaded,active,exited,Create final runtime dir for shutdown pivot root
+fstrim.service,loaded,inactive,dead,Discard unused blocks on filesystems from /etc/fstab
+fwupd-refresh.service,loaded,inactive,dead,Refresh fwupd metadata and update motd
+fwupd.service,loaded,active,running,Firmware update daemon
+getty-static.service,loaded,inactive,dead,getty on tty2-tty6 if dbus and logind are not available
+getty@tty1.service,loaded,active,running,Getty on tty1
+grub-common.service,loaded,inactive,dead,Record successful boot for GRUB
+grub-initrd-fallback.service,loaded,inactive,dead,GRUB failed boot detection
+initrd-cleanup.service,loaded,inactive,dead,Cleaning Up and Shutting Down Daemons
+initrd-parse-etc.service,loaded,inactive,dead,Mountpoints Configured in the Real Root
+initrd-switch-root.service,loaded,inactive,dead,Switch Root
+initrd-udevadm-cleanup-db.service,loaded,inactive,dead,Cleanup udev Database
+iscsid.service,loaded,inactive,dead,iSCSI initiator daemon (iscsid)
+keyboard-setup.service,loaded,active,exited,Set the console keyboard layout
+kmod-static-nodes.service,loaded,active,exited,Create List of Static Device Nodes
+ldconfig.service,loaded,inactive,dead,Rebuild Dynamic Linker Cache
+logrotate.service,loaded,inactive,dead,Rotate log files
+lvm2-lvmpolld.service,loaded,inactive,dead,LVM2 poll daemon
+lvm2-monitor.service,loaded,active,exited,"Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling"
+man-db.service,loaded,inactive,dead,Daily man-db regeneration
+ModemManager.service,loaded,active,running,Modem Manager
+modprobe@configfs.service,loaded,inactive,dead,Load Kernel Module configfs
+modprobe@dm_mod.service,loaded,inactive,dead,Load Kernel Module dm_mod
+modprobe@drm.service,loaded,inactive,dead,Load Kernel Module drm
+modprobe@efi_pstore.service,loaded,inactive,dead,Load Kernel Module efi_pstore
+modprobe@fuse.service,loaded,inactive,dead,Load Kernel Module fuse
+modprobe@loop.service,loaded,inactive,dead,Load Kernel Module loop
+motd-news.service,loaded,inactive,dead,Message of the Day
+multipathd.service,loaded,active,running,Device-Mapper Multipath Device Controller
+netplan-ovs-cleanup.service,loaded,inactive,dead,OpenVSwitch configuration for cleanup
+networkd-dispatcher.service,loaded,inactive,dead,Dispatcher daemon for systemd-networkd
+nginx.service,loaded,active,running,A high performance web server and a reverse proxy server
+nmbd.service,loaded,active,running,Samba NMB Daemon
+open-iscsi.service,loaded,inactive,dead,Login to default iSCSI targets
+open-vm-tools.service,loaded,inactive,dead,Service for virtual machines hosted on VMware
+plymouth-quit-wait.service,loaded,active,exited,Hold until boot process finishes up
+plymouth-quit.service,loaded,active,exited,Terminate Plymouth Boot Screen
+plymouth-read-write.service,loaded,active,exited,Tell Plymouth To Write Out Runtime Data
+plymouth-start.service,loaded,inactive,dead,Show Plymouth Boot Screen
+plymouth-switch-root.service,loaded,inactive,dead,Plymouth switch root service
+polkit.service,loaded,active,running,Authorization Manager
+pollinate.service,loaded,inactive,dead,Pollinate to seed the pseudo random number generator
+rc-local.service,loaded,inactive,dead,/etc/rc.local Compatibility
+rescue.service,loaded,inactive,dead,Rescue Shell
+rsyslog.service,loaded,active,running,System Logging Service
+samba-ad-dc.service,loaded,inactive,dead,Samba AD Daemon
+secureboot-db.service,loaded,inactive,dead,Secure Boot updates for DB and DBX
+setvtrgb.service,loaded,active,exited,Set console scheme
+smbd.service,loaded,active,running,Samba SMB Daemon
+snapd.apparmor.service,loaded,active,exited,Load AppArmor profiles managed internally by snapd
+snapd.autoimport.service,loaded,inactive,dead,Auto import assertions from block devices
+snapd.core-fixup.service,loaded,inactive,dead,Automatically repair incorrect owner/permissions on core devices
+snapd.failure.service,loaded,inactive,dead,Failure handling of the snapd snap
+snapd.recovery-chooser-trigger.service,loaded,inactive,dead,Wait for the Ubuntu Core chooser trigger
+snapd.seeded.service,loaded,active,exited,Wait until snapd is fully seeded
+snapd.service,loaded,inactive,dead,Snap Daemon
+snapd.snap-repair.service,loaded,inactive,dead,Automatically fetch and run repair assertions
+snapd.system-shutdown.service,loaded,inactive,dead,Ubuntu core (all-snaps) system shutdown helper setup service
+ssh.service,loaded,active,running,OpenBSD Secure Shell server
+sysstat-collect.service,loaded,inactive,dead,system activity accounting tool
+sysstat-summary.service,loaded,inactive,dead,Generate a daily summary of process accounting
+sysstat.service,loaded,active,exited,Resets System Activity Logs
+systemd-ask-password-console.service,loaded,inactive,dead,Dispatch Password Requests to Console
+systemd-ask-password-plymouth.service,loaded,inactive,dead,Forward Password Requests to Plymouth
+systemd-ask-password-wall.service,loaded,inactive,dead,Forward Password Requests to Wall
+systemd-battery-check.service,loaded,inactive,dead,Check battery level during early boot
+systemd-binfmt.service,loaded,active,exited,Set Up Additional Binary Formats
+systemd-bsod.service,loaded,inactive,dead,Displays emergency message in full screen.
+systemd-firstboot.service,loaded,inactive,dead,First Boot Wizard
+systemd-fsck-root.service,loaded,inactive,dead,File System Check on Root Device
+systemd-fsck@dev-disk-by\x2duuid-d42ebb2b\x2d37e6\x2d4088\x2d8258\x2d122a0bc38fd9.service,loaded,active,exited,File System Check on /dev/disk/by-uuid/d42ebb2b-37e6-4088-8258-122a0bc38fd9
+systemd-fsckd.service,loaded,inactive,dead,File System Check Daemon to report status
+systemd-hibernate-resume.service,loaded,inactive,dead,Resume from hibernation
+systemd-hibernate.service,loaded,inactive,dead,System Hibernate
+systemd-hwdb-update.service,loaded,inactive,dead,Rebuild Hardware Database
+systemd-hybrid-sleep.service,loaded,inactive,dead,System Hybrid Suspend+Hibernate
+systemd-initctl.service,loaded,inactive,dead,initctl Compatibility Daemon
+systemd-journal-catalog-update.service,loaded,inactive,dead,Rebuild Journal Catalog
+systemd-journal-flush.service,loaded,active,exited,Flush Journal to Persistent Storage
+systemd-journald.service,loaded,active,running,Journal Service
+systemd-logind.service,loaded,active,running,User Login Management
+systemd-machine-id-commit.service,loaded,inactive,dead,Commit a transient machine-id on disk
+systemd-modules-load.service,loaded,active,exited,Load Kernel Modules
+systemd-networkd-wait-online.service,loaded,active,exited,Wait for Network to be Configured
+systemd-networkd.service,loaded,active,running,Network Configuration
+systemd-pcrmachine.service,loaded,inactive,dead,TPM2 PCR Machine ID Measurement
+systemd-pcrphase-initrd.service,loaded,inactive,dead,TPM2 PCR Barrier (initrd)
+systemd-pcrphase-sysinit.service,loaded,inactive,dead,TPM2 PCR Barrier (Initialization)
+systemd-pcrphase.service,loaded,inactive,dead,TPM2 PCR Barrier (User)
+systemd-pstore.service,loaded,inactive,dead,Platform Persistent Storage Archival
+systemd-quotacheck.service,loaded,inactive,dead,File System Quota Check
+systemd-random-seed.service,loaded,active,exited,Load/Save OS Random Seed
+systemd-remount-fs.service,loaded,active,exited,Remount Root and Kernel File Systems
+systemd-repart.service,loaded,inactive,dead,Repartition Root Disk
+systemd-resolved.service,loaded,active,running,Network Name Resolution
+systemd-rfkill.service,loaded,inactive,dead,Load/Save RF Kill Switch Status
+systemd-soft-reboot.service,loaded,inactive,dead,Reboot System Userspace
+systemd-suspend-then-hibernate.service,loaded,inactive,dead,System Suspend then Hibernate
+systemd-suspend.service,loaded,inactive,dead,System Suspend
+systemd-sysctl.service,loaded,active,exited,Apply Kernel Variables
+systemd-sysext.service,loaded,inactive,dead,Merge System Extension Images into /usr/ and /opt/
+systemd-sysusers.service,loaded,inactive,dead,Create System Users
+systemd-timesyncd.service,loaded,active,running,Network Time Synchronization
+systemd-tmpfiles-clean.service,loaded,inactive,dead,Cleanup of Temporary Directories
+systemd-tmpfiles-setup-dev-early.service,loaded,active,exited,Create Static Device Nodes in /dev gracefully
+systemd-tmpfiles-setup-dev.service,loaded,active,exited,Create Static Device Nodes in /dev
+systemd-tmpfiles-setup.service,loaded,active,exited,Create Volatile Files and Directories
+systemd-tpm2-setup-early.service,loaded,inactive,dead,TPM2 SRK Setup (Early)
+systemd-tpm2-setup.service,loaded,inactive,dead,TPM2 SRK Setup
+systemd-udev-settle.service,loaded,inactive,dead,Wait for udev To Complete Device Initialization
+systemd-udev-trigger.service,loaded,active,exited,Coldplug All udev Devices
+systemd-udevd.service,loaded,active,running,Rule-based Manager for Device Events and Files
+systemd-update-done.service,loaded,inactive,dead,Update is Completed
+systemd-update-utmp-runlevel.service,loaded,inactive,dead,Record Runlevel Change in UTMP
+systemd-update-utmp.service,loaded,active,exited,Record System Boot/Shutdown in UTMP
+systemd-user-sessions.service,loaded,active,exited,Permit User Sessions
+thermald.service,loaded,inactive,dead,Thermal Daemon Service
+tpm-udev.service,loaded,inactive,dead,Handle dynamically added tpm devices
+ua-reboot-cmds.service,loaded,inactive,dead,Ubuntu Pro reboot cmds
+ua-timer.service,loaded,inactive,dead,Ubuntu Pro Timer for running repeated jobs
+ubuntu-advantage.service,loaded,inactive,dead,Ubuntu Pro Background Auto Attach
+udisks2.service,loaded,active,running,Disk Manager
+ufw.service,loaded,active,exited,Uncomplicated firewall
+unattended-upgrades.service,loaded,active,running,Unattended Upgrades Shutdown
+update-notifier-download.service,loaded,inactive,dead,Download data for packages that failed at package install time
+update-notifier-motd.service,loaded,inactive,dead,Check to see whether there is a new version of Ubuntu available
+upower.service,loaded,active,running,Daemon for power management
+uuidd.service,loaded,inactive,dead,Daemon for generating UUIDs
+vgauth.service,loaded,inactive,dead,Authentication service for virtual machines hosted on VMware
+
+=== Upgradable Packages (apt list --upgradable) ===
+
+Line
+distro-info-data/noble-updates 0.60ubuntu0.6 all [upgradable from: 0.60ubuntu0.5]
+docker-buildx-plugin/noble 0.34.0-1~ubuntu.24.04~noble amd64 [upgradable from: 0.33.0-1~ubuntu.24.04~noble]
+docker-ce-cli/noble 5:29.5.1-1~ubuntu.24.04~noble amd64 [upgradable from: 5:29.4.2-2~ubuntu.24.04~noble]
+docker-ce-rootless-extras/noble 5:29.5.1-1~ubuntu.24.04~noble amd64 [upgradable from: 5:29.4.2-2~ubuntu.24.04~noble]
+docker-ce/noble 5:29.5.1-1~ubuntu.24.04~noble amd64 [upgradable from: 5:29.4.2-2~ubuntu.24.04~noble]
+libheif-plugin-aomdec/noble-updates 1.17.6-1ubuntu4.3 amd64 [upgradable from: 1.17.6-1ubuntu4.2]
+libheif-plugin-aomenc/noble-updates 1.17.6-1ubuntu4.3 amd64 [upgradable from: 1.17.6-1ubuntu4.2]
+libheif-plugin-libde265/noble-updates 1.17.6-1ubuntu4.3 amd64 [upgradable from: 1.17.6-1ubuntu4.2]
+libheif1/noble-updates 1.17.6-1ubuntu4.3 amd64 [upgradable from: 1.17.6-1ubuntu4.2]
+linux-generic/noble-updates 6.8.0-117.117 amd64 [upgradable from: 6.8.0-111.111]
+linux-headers-generic/noble-updates 6.8.0-117.117 amd64 [upgradable from: 6.8.0-111.111]
+linux-image-generic/noble-updates 6.8.0-117.117 amd64 [upgradable from: 6.8.0-111.111]
+linux-libc-dev/noble-updates 6.8.0-117.117 amd64 [upgradable from: 6.8.0-111.111]
+linux-tools-common/noble-updates 6.8.0-117.117 all [upgradable from: 6.8.0-111.111]
+open-vm-tools/noble-updates 2:13.0.0-2~ubuntu0.24.04.1 amd64 [upgradable from: 2:12.5.0-1~ubuntu0.24.04.2]
+
+=== Suspicious Processes (heuristic) ===
+
+PID,Name,User,Exe,Cmd,Flags
+720,polkitd,polkitd,/usr/lib/polkit-1/polkitd,/usr/lib/polkit-1/polkitd --no-debug,non-standard exe path
+738,unattended-upgr,root,/usr/bin/python3.12,/usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal,suspicious name/cmd
+862,dockerd,root,/usr/bin/dockerd,/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock,suspicious name/cmd
+29220,python3,root,/usr/bin/python3.12,/home/grup1/scripts/venv/bin/python3 /home/grup1/scripts/diag_agent_single.py --host 192.168.1.72 --port 8080 --allow-from 192.168.1.0/24,suspicious name/cmd; root from user/tmp path
+63847,rpcd_lsad,root,/usr/libexec/samba/rpcd_lsad,/usr/libexec/samba/rpcd_lsad --configfile=/etc/samba/smb.conf --worker-group=5 --worker-index=0 --debuglevel=0,suspicious name/cmd
+63861,rpcd_classic,root,/usr/libexec/samba/rpcd_classic,/usr/libexec/samba/rpcd_classic --configfile=/etc/samba/smb.conf --worker-group=2 --worker-index=0 --debuglevel=0,suspicious name/cmd
+63863,rpcd_winreg,root,/usr/libexec/samba/rpcd_winreg,/usr/libexec/samba/rpcd_winreg --configfile=/etc/samba/smb.conf --worker-group=3 --worker-index=5 --debuglevel=0,suspicious name/cmd
+

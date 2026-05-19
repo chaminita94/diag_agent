@@ -66,6 +66,7 @@ nav:
     - Proxy Revers: agent/website/proxy.md
   - Manual d'Usuari:
     - Guia d'Ús: agent/manual/index.md
+    - Exemple de Funcionament: agent/manual/exemple-funcionament.md
     - Requisits: agent/requisits.md
     - Instal·lació: agent/installacio.md
     - Desplegament USB: agent/desplegament-usb.md
